@@ -1,0 +1,36 @@
+/* semantic color variables for this project */
+:root {
+  --flashBlue : #38b6ff;
+  --lightBlue: #cbf7f8;
+  --black: black;
+  --darkBrown : #9d6c53;
+  --lightBrown : #c68b59;
+  --grey : #dfd8ca;
+
+  --font-brittany : "Brittany Signature", sans-serif;
+  --font-poppins : 'Poppins', sans-serif;
+  --font-forum :  "Forum", sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+body {
+    background-color: black;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+html,body {
+  overflow: hidden;
+}
+@media screen and (max-width:1024px){
+  html,body {
+    overflow: visible;
+  }
+}
+
