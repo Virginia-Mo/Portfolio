@@ -1,6 +1,6 @@
 <template>
     <div class="aboutContainer">
-        <div id="Menu__aboutHome">
+        <!-- <div id="Menu__aboutHome">
             <router-link to="/menu">
                 <img
                     src="@/assets/imgs/maison.png"
@@ -8,7 +8,8 @@
                     id="imgHome"
                 />
             </router-link>
-        </div>
+        </div> -->
+        <NavBarTop />
         <div id="About__titlediv">
             <h1 id="About__h1">About Me</h1>
             <div id="light">
@@ -46,10 +47,11 @@
 </template>
 <script>
 import NavBar from '@/components/NavBar.vue'
+import NavBarTop from '@/components/NavBarTop.vue'
 
 export default {
     name: 'aboutPortfolio',
-    components: { NavBar },
+    components: { NavBar, NavBarTop },
 }
 </script>
 <style scoped>

@@ -23,24 +23,18 @@
                     </p>
                 </div>
             </div>
-            <div class="Projects__aboutHome">
-                <router-link to="/menu">
-                    <img
-                        src="@/assets/imgs/maison.png"
-                        alt="Image retour a arrière"
-                        id="imgHome"
-                    />
-                </router-link>
-            </div>
+         <NavBarTop />
         </div>
         <NavBar />
     </div>
 </template>
 <script>
 import NavBar from "@/components/NavBar.vue"
+import NavBarTop from '@/components/NavBarTop.vue'
+
 export default {
     name: 'PopnBubble',
-    components : { NavBar } 
+    components : { NavBar, NavBarTop } 
 }
 </script>
 

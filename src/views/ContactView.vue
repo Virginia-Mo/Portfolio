@@ -1,6 +1,6 @@
 <template>
     <div id="contactContainer">
-        <div id="contact__aboutHome">
+        <!-- <div id="contact__aboutHome">
             <router-link to="/menu">
                 <img
                     src="@/assets/imgs/maison.png"
@@ -8,7 +8,8 @@
                     class="imgHome"
                 />
             </router-link>
-        </div>
+        </div> -->
+        <NavBarTop />
         <div id="contact__titlesContainer">
             <h1 id="contact__h1">
                 <span id="contact__work">LET'S WORK</span>
@@ -60,10 +61,11 @@
 </template>
 <script>
 import NavBar from '@/components/NavBar.vue'
+import NavBarTop from '@/components/NavBarTop.vue'
 
 export default {
-    name : "contactPortfolio",
-    components : {NavBar}
+    name: 'contactPortfolio',
+    components: { NavBar, NavBarTop },
 }
 </script>
 <style>

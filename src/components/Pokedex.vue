@@ -24,22 +24,15 @@
                         iusto veritatis numquam voluptas exercitationem ipsam
                         neque, quia doloremque odit cumque. Tenetur vitae facere
                         dolore adipisci.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cum eos maxime veritatis, temporibus aut, labore natus id aliquam modi saepe, rem quia repellat quaerat obcaecati non ipsam unde. Autem!
                     </p>
                 </div>
             </div>
-            <div class="Projects__aboutHome">
-                <router-link to="/menu">
-                    <img
-                        src="@/assets/imgs/maison.png"
-                        alt="Image retour a arrière"
-                        id="imgHome"
-                    />
-                </router-link>
-            </div>
+           <NavBarTop />
         </div>
         <div id="footerContainer">
             <MouseScroll />
-            <footer class="blueFooter">
+          <footer class="blueFooter">
                 <div
                     class="arrowRight"
                     @click="(this.popnbubble = true), (this.displayPnb = true)"
@@ -48,16 +41,18 @@
                 </div>
             </footer>
         </div>
-    </div>
+    </div> 
+     
     <PopnBubble v-if="popnbubble" />
 </template>
 <script>
 import PopnBubble from '@/components/PopnBubble.vue'
 import MouseScroll from '@/components/MouseScroll.vue'
+import NavBarTop from '@/components/NavBarTop.vue'
 
 export default {
     name: 'Pokedex',
-    components: { PopnBubble, MouseScroll },
+    components: { PopnBubble, MouseScroll, NavBarTop },
     data() {
         return {
             displayPnb: false,

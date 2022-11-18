@@ -29,6 +29,14 @@
         </div>
         <NavBar />
     </div>
+    <footer class="blueFooter">
+           <div
+               class="arrowRight"
+               @click="(this.kdc = true), (this.showMainPage = false)"
+           >
+               &#8594;
+           </div>
+       </footer>
     <KiddyCare v-if="kdc" />
 </template>
 <script>
@@ -81,6 +89,10 @@ export default {
 </script>
 
 <style>
+.blueFooter {
+    position: fixed;
+    bottom: 0;
+}
 #projects__container {
     display: flex;
 }
@@ -129,6 +141,9 @@ export default {
         margin: 50% 15% 0;
         font-size: 7rem;
         text-align: center;
+    }
+    .blueFooter {
+        display: none;
     }
 }
 @media screen and (min-width: 1024px) {

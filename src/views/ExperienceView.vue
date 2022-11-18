@@ -63,21 +63,17 @@
         </div>
         </div>
     </section>
-        <div id="experience__aboutHome">
-            <router-link to="/menu">
-            <img src="@/assets/imgs/maison.png" alt="Image retour a arrière" class="imgHome">
-        </router-link>
-    </div>
 </div>
+<NavBarTop />
 <NavBar />
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue'
-
+import NavBarTop from '@/components/NavBarTop.vue'
 export default {
     name : "experiencePortfolio",
-    components : { NavBar }
+    components : { NavBar, NavBarTop }
 }
 </script>
 <style scoped>

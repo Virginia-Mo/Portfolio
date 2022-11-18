@@ -10,7 +10,7 @@
                     >
                         <h1
                             id="title__name"
-                            class="animate__animated animate__fadeIn animate__slower"
+                            class="animate__animated animate__fadeIn animate__slow"
                         >
                             Virginia Mo
                         </h1>
@@ -44,7 +44,7 @@ export default {
                 opacity: 0,
                 duration: 1000,
                 easing: 'easeOutExpo',
-                delay: 1000,
+                delay: 10,
             })
     },
 }

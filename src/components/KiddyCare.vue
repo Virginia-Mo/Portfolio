@@ -28,16 +28,7 @@
                     </p>
                 </div>
             </div>
-            <div class="Projects__aboutHome"> 
-                <router-link to="/menu">
-                    <img
-                        src="@/assets/imgs/maison.png"
-                        alt="Image retour a arrière"
-                        id="imgHome"
-                    />
-                </router-link>
-               
-            </div>
+<NavBarTop />
         </div>
         <div id="footerContainer">
             <MouseScroll />
@@ -57,10 +48,11 @@
 <script>
 import Pokedex from '@/components/Pokedex.vue'
 import MouseScroll from '@/components/MouseScroll.vue'
+import NavBarTop from '@/components/NavBarTop.vue'
 
 export default {
     name: 'KiddyCare',
-    components: { Pokedex, MouseScroll},
+    components: { Pokedex, MouseScroll, NavBarTop},
     data() {
         return {
             pokedex: false,
