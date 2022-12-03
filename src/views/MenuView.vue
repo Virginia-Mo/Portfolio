@@ -3,11 +3,7 @@
         <div id="MenuContainer2">
             <div id="Menu__HomeContainer">
                 <router-link to="/">
-                    <img
-                        src="@/assets/imgs/maison.png"
-                        alt="Image retour a arrière"
-                        class="imgHome"
-                    />
+                    <icon class="" name="home" :size="50" color="#dfd8ca" />
                 </router-link>
             </div>
             <h1 id="Menu__h1">Table of Content</h1>
@@ -43,8 +39,11 @@
     </div>
 </template>
 <script>
+import Icon from "@/components/Icon.vue";
+
 export default {
     name: 'MenuPortfolio',
+    components : { Icon }
 }
 </script>
 <style>

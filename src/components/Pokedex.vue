@@ -1,4 +1,4 @@
-<template>
+p<template>
     <div
         id="pokedexContainer"
         class="projectsContainers"
@@ -8,113 +8,143 @@
         <div class="Projects__underline"></div>
         <div class="Projects__mainDiv">
             <div class="Projects__firstdiv">
-                <div id="pokedex__imgDiv">
+                <div class="projects__imgDiv pokedex__imgDiv">  
+                          <router-link to="https://thepokedexvm.netlify.app/">
                     <img
                         src="@/assets/imgs/pkdx.png"
                         alt="Photo projet Pokedex"
                         id="pokedex__img"
                     />
+                </router-link>
                 </div>
             </div>
             <div class="Projects__secondDiv">
                 <div class="Projects__detailsContainer">
-                    <p class="Projects__p">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Deleniti illo, optio nostrum animi repudiandae,
-                        iusto veritatis numquam voluptas exercitationem ipsam
-                        neque, quia doloremque odit cumque. Tenetur vitae facere
-                        dolore adipisci.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cum eos maxime veritatis, temporibus aut, labore natus id aliquam modi saepe, rem quia repellat quaerat obcaecati non ipsam unde. Autem!
-                    </p>
+                    <p class="Projects__p" v-if="isFrench">
+                        Voici un petit projet que j'ai fait afin de m'entraîner aux appels API.<br/>
+Le bien connu Pokedex ! <br/>
+Les utilisateurs, après avoir ouvert la pokeball, peuvent accéder aux informations de différents pokemon en tapant leur numéro ou nom en anglais.
+Ils peuvent aussi voir les pokemons de façon random en cliquant sur le bouton prévu à cet effet.<br/>
+Les langages utilisés sont HTML5, CSS3 et vanilla JS.<br/>
+Repo Github => <span class="go"><a class="projects__links" href="https://github.com/Virginia-Mo/virginia-mo.github.io"> GO !</a> </span><br/>
+Le projet se trouve ici =><a href="https://thepokedexvm.netlify.app/" class="projects__links">Pokedex</a>.
+</p>
+<p class="Projects__p" v-if="isEnglish">
+    Here's a project I coded to work on API calls (and to get a bit of nostalgia, pokemon was part of my childhood).
+    The world famous Pokedex !
+    Users can, after opening the pokeball, access to all the informations about differents pokemon by taping their number or name (in English).
+    They can also look for Pokemon randmly by clicking the button 
+meant for that purpose.
+Languages used are HTML5, CSS3 and vanilla JS.<br/>
+Repo Github => <span class="go"><a class="projects__links" href="https://github.com/Virginia-Mo/virginia-mo.github.io"> GO !</a> </span><br/>
+You can find it here => <a href="https://thepokedexvm.netlify.app/" class="projects__links">Pokedex</a>.
+    </p>
                 </div>
             </div>
            <NavBarTop />
         </div>
         <div id="footerContainer">
-            <MouseScroll />
-          <footer class="blueFooter">
+            <MouseScroll class="mousescroll__notMobile mouse_scroll--pokedex"/>
+            <footer class="blueFooter blueFooter--pokedex">
+    <router-link to="/projects/kiddycare" class="Projects__arrowDiv">
+        <div
+                    class="arrow arrowLeft"
+                >
+                &#8592;
+                </div>
+            </router-link>
+                <router-link to="/projects/popnbubble" class="Projects__arrowDiv">
                 <div
-                    class="arrowRight"
-                    @click="(this.popnbubble = true), (this.displayPnb = true)"
+                    class="arrow arrowRight"
                 >
                     &#8594;
                 </div>
-            </footer>
+            </router-link>
+            </footer> 
         </div>
     </div> 
      
-    <PopnBubble v-if="popnbubble" />
+ 
 </template>
 <script>
-import PopnBubble from '@/components/PopnBubble.vue'
 import MouseScroll from '@/components/MouseScroll.vue'
 import NavBarTop from '@/components/NavBarTop.vue'
 
+
+import { mapState } from 'pinia'
+import { getLanguage } from '@/stores/getLanguage.js'
+
 export default {
     name: 'Pokedex',
-    components: { PopnBubble, MouseScroll, NavBarTop },
-    data() {
-        return {
-            displayPnb: false,
-            popnbubble: false,
-        }
-    },
-    methods: {
-        handleScroll2(event) {
-            const y = event.deltaY
-            if (y > 0) {
-                this.popnbubble = true
-                this.displayPnb = true
-            } else {
-                this.popnbubble = false
-                this.displayPnb = false
-            }
-        },
-        handleKeyDown2(event) {
-            console.log('hello')
-            if (event.key === 'ArrowDown') {
-                this.popnbubble = true
-                this.displayPnb = true
-            } else {
-                this.popnbubble = false
-                this.displayPnb = false
-            }
-        },
-    },
+    components: { MouseScroll, NavBarTop },
+    computed : {
+...mapState(getLanguage,["isEnglish", "isFrench"])
+},
+    // data() {
+    //     return {
+    //         displayPnb: false,
+    //         popnbubble: false,
+    //     }
+    // },
+    // methods: {
+    //     handleScroll2(event) {
+    //         const y = event.deltaY
+    //         if (y > 0) {
+    //             this.popnbubble = true
+    //             this.displayPnb = true
+    //         } else {
+    //             this.popnbubble = false
+    //             this.displayPnb = false
+    //         }
+    //     },
+    //     handleKeyDown2(event) {
+    //         console.log('hello')
+    //         if (event.key === 'ArrowDown') {
+    //             this.popnbubble = true
+    //             this.displayPnb = true
+    //         } else {
+    //             this.popnbubble = false
+    //             this.displayPnb = false
+    //         }
+    //     },
+    // },
 
-    mounted() {
-        window.addEventListener('wheel', this.handleScroll2)
-        window.addEventListener('keydown', this.handleKeyDown2)
-    },
-    unmounted() {
-        window.removeEventListener('wheel', this.handleScroll2)
-        window.removeEventListener('keydown', this.handleKeyDown2)
-    },
+    // mounted() {
+    //     window.addEventListener('wheel', this.handleScroll2)
+    //     window.addEventListener('keydown', this.handleKeyDown2)
+    // },
+    // unmounted() {
+    //     window.removeEventListener('wheel', this.handleScroll2)
+    //     window.removeEventListener('keydown', this.handleKeyDown2)
+    // },
 }
 </script>
 
 <style>
+.blueFooter--pokedex {
+    position: fixed;
+    bottom: 0;
+}
 .displayPnb {
     display: none;
 }
-#pokedexContainer {
-    background-image: url('@/assets/imgs/bgpokedex.png');
-}
-#pokedex__imgDiv {
-    background-color: var(--grey);
-    border: solid 3px var(--darkBrown);
-    height: auto;
-    width: 61%;
-    padding: 2rem 2rem;
-    margin: 0 auto;
-}
+
 #pokedex__img {
     width: 100%;
 }
+.mouse_scroll--pokedex {
+    margin-top: 12.5rem;
+}
+#pokedexContainer {
+    background-color: var(--black);
+}
 @media screen and (min-width: 1024px) {
-    #pokedex__imgDiv {
+    .pokedex__imgDiv {
         width: 45%;
         margin: -8rem 0 0 17rem;
     }
+    #pokedexContainer {
+    background-image: url('@/assets/imgs/bgpokedex.png');
+}
 }
 </style>

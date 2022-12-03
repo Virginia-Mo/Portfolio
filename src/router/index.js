@@ -38,6 +38,21 @@ const router = createRouter({
             component: () => import('../views/ProjectsView.vue'),
         },
         {
+            path: '/projects/kiddycare',
+            name: 'projectsKiddyCare',
+            component: () => import('../components/KiddyCare.vue'),
+        },
+        {
+            path: '/projects/pokedex',
+            name: 'projectsPokedex',
+            component: () => import('../components/Pokedex.vue'),
+        },
+        {
+            path: '/projects/popnbubble',
+            name: 'projectsPopnbubble',
+            component: () => import('../components/PopnBubble.vue'),
+        },
+        {
             path: '/contact',
             name: 'contactPortfolio',
             component: () => import('../views/ContactView.vue'),

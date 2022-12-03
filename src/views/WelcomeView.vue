@@ -14,7 +14,7 @@
                         >
                             Virginia Mo
                         </h1>
-                        <h2 id="title__job" class="ml2">Web developper</h2>
+                        <h2 id="title__job" class="ml2">Web developer</h2>
                     </div>
                 </router-link>
             </div>

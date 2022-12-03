@@ -11,6 +11,7 @@
                     <ul class="skills_ul">
                         <li>HTML</li>
                         <li>CSS</li>
+                        <li>SCSS</li>
                         <li>Javascript</li>
                     </ul>
                 </p>
@@ -19,7 +20,7 @@
                 <p class="skills__details">
                     <ul class="skills_ul">
                         <li>Vue JS : Vue Router, Pinia..</li>
-                        <li>React</li>
+                        <li>React : React Router, Redux, JEST..</li>
                     </ul>
                 </p>
             </div>
@@ -52,20 +53,17 @@
                 </p>
             </div>
         </div>
-        <div id="skills__aboutHome">
-            <router-link to="/menu">
-            <img src="@/assets/imgs/maison.png" alt="Image retour a arrière" class="imgHome">
-        </router-link>
-    </div>
+        <NavBarTop />
     <NavBar />
     </div>
 </template>
 <script>
 import NavBar from '@/components/NavBar.vue'
+import NavBarTop from '@/components/NavBarTop.vue'
 
 export default {
     name : "SkillsPortfolio",
-    components : { NavBar } 
+    components : { NavBar, NavBarTop } 
 } 
 </script>
 <style>

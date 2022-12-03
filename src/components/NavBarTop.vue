@@ -1,11 +1,8 @@
 <template>
     <div id="navBarTop--notMobile">
+        <FlagContent />
         <router-link to="/menu">
-            <img
-                src="@/assets/imgs/maison.png"
-                alt="Image retour a arrière"
-                class="imgHome"
-            />
+            <icon name="home" :size="50" color="#dfd8ca" />
         </router-link>
     </div>
     <div id="navBarTop--mobile">
@@ -23,7 +20,8 @@
         <nav
         :class="[{menuOpen : isOpenBurger} , {menuClose : !isOpenBurger}]"
         class="navBarTop__links">
-            <router-link class="navLinks" to="/home">Home</router-link>
+        <FlagContent />
+            <router-link class="navLinks" to="/menu">Home</router-link>
             <router-link class="navLinks" to="/about"
                 >A Propos / About</router-link
             >
@@ -39,8 +37,18 @@
     </div>
 </template>
 <script>
+import { mapState } from 'pinia'
+import { getLanguage } from '@/stores/getLanguage.js'
+
+import FlagContent from '@/components/FlagContent.vue'
+import Icon from "@/components/Icon.vue";
+
 export default {
     name: 'NavBarTop',
+    components : {FlagContent, Icon},
+    computed : {
+...mapState(getLanguage,["isEnglish", "isFrench"])
+},
     data() {
         return {
             isOpenBurger: false,
@@ -73,6 +81,7 @@ export default {
     position: fixed;
     right: 0.5rem;
     top: 0.5rem;
+    display: flex;
 }
 #navBarTop--mobile:hover {
     transition: 0.5s;
@@ -81,11 +90,12 @@ export default {
 .navBarTop__links {
     color: var(--grey);
     background-color: var(--lightBrown);
-    opacity: 0.9;
+    opacity: 0.95;
     height: auto;
     position: fixed;
     top: 0;
-    gap: 4rem;
+    z-index: 5;
+    gap: 3rem;
     font-size: 1.7rem;
     padding: 2rem 2rem 3rem;
     text-decoration: none;
@@ -99,29 +109,38 @@ export default {
 }
 .menuOpen {
    right: 0;
-    transition: right 0.7s cubic-bezier(0.05, 0.15, 0.65, 1.12)
-;
+    transition: right 0.7s cubic-bezier(0.05, 0.15, 0.65, 1.12);
+    border: solid 1px black;
 }
 .navLinks {
     color: black;
+    border: solid 1px black;
     text-decoration: none;
     font-weight: 600;
+    background-color: var(--grey);
+    border-radius: 10px;
+    height: 2.5rem;
+    padding-left: 1rem;
+    line-height: 2.6rem;
+    transition: transform 0.5s;
 }
 .navLinks:hover {
     transform: scale(1.1);
+    transition: transform 0.5s;
 }
 #nav {
     box-sizing: border-box;
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1250px) {
     #navBarTop--notMobile {
         display: none;
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1250px) {
     #navBarTop--mobile {
         display: none;
     }
@@ -135,7 +154,7 @@ export default {
     /* transform: translate(-50%, -50%); */
     width: 4rem;
     height: 4rem;
-    z-index: 2;
+    z-index: 6;
     border-radius: 50%;
     background: var(--grey);
     box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);

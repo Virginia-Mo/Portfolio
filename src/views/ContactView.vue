@@ -1,14 +1,5 @@
 <template>
     <div id="contactContainer">
-        <!-- <div id="contact__aboutHome">
-            <router-link to="/menu">
-                <img
-                    src="@/assets/imgs/maison.png"
-                    alt="Image retour a arrière"
-                    class="imgHome"
-                />
-            </router-link>
-        </div> -->
         <NavBarTop />
         <div id="contact__titlesContainer">
             <h1 id="contact__h1">
@@ -18,31 +9,19 @@
             <div id="contact__detailsDiv">
                 <div class="contact__details">
                     <div class="contact__imgContainer">
-                        <img
-                            class="contact__imgs"
-                            src="@/assets/imgs/appel.png"
-                            alt="Icone téléphone"
-                        />
+                        <icon class="icons__contact" name="phone" :size="50" color="#cbf7f8" />
                     </div>
                     <p class="contact__p">: 06.73.31.48.88</p>
                 </div>
                 <div class="contact__details">
                     <div class="contact__imgContainer">
-                        <img
-                            class="contact__imgs"
-                            src="@/assets/imgs/e-mail.png"
-                            alt="Icone email"
-                        />
+                        <icon class="icons__contact" name="envelop" :size="50" color="#cbf7f8" />
                     </div>
                     <p class="contact__p">: antonio.vir@hotmail.com</p>
                 </div>
                 <div class="contact__details">
                     <div class="contact__imgContainer">
-                        <img
-                            class="contact__imgs"
-                            src="@/assets/imgs/site-internet.png"
-                            alt="Icone site internet"
-                        />
+                        <icon class="icons__contact" name="sphere" :size="50" color="#cbf7f8" />
                     </div>
                     <p class="contact__p">
                         <router-link to="https://github.com/Virginia-Mo"
@@ -62,10 +41,11 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import NavBarTop from '@/components/NavBarTop.vue'
+import Icon from "@/components/Icon.vue";
 
 export default {
     name: 'contactPortfolio',
-    components: { NavBar, NavBarTop },
+    components: { NavBar, NavBarTop, Icon },
 }
 </script>
 <style>
@@ -97,7 +77,13 @@ export default {
     max-width: 100%;
 }
 .contact__imgContainer {
-    width: 3rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--flashBlue);
+    border-radius: 50%;
+}
+.icons__contact {
+margin: 1rem;
 }
 .contact__details {
     padding: 1rem 0;
@@ -157,4 +143,5 @@ export default {
         width: 5rem;
     }
 }
+
 </style>

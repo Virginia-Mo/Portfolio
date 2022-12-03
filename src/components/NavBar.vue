@@ -10,67 +10,44 @@
                     dynamicBullets: true,
                 }"
                 :modules="modules"
-                class="mySwiper"
+                class="mySwiper swiperNav"
             >
-                <swiper-slide>
+                <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/menu">
-                            <img
-                                src="@/assets/imgs/maison.png"
-                                alt="Icone Menu"
-                                class="nav__icons"
-                            />
+                            <icon name="home" color="#fff" size="30"/>
                         </router-link>
-                    </div>
+                    </div> 
                 </swiper-slide>
-                <swiper-slide>
+                <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/about">
-                            <img
-                                src="@/assets/imgs/id.png"
-                                alt="Icone A propos"
-                                class="nav__icons"
-                            />
+                            <icon name="profile-female" color="#fff" size="30"/>
                         </router-link></div
                 ></swiper-slide>
-                <swiper-slide>
+                <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/experience">
-                            <img
-                                src="@/assets/imgs/education.png"
-                                alt="Icone experience"
-                                class="nav__icons"
-                            />
-                        </router-link></div
-                ></swiper-slide>
-                <swiper-slide>
+                            <icon name="study, graduation, hat, college" color="#fff" size="30"/>
+                        </router-link>
+                            </div>
+                        </swiper-slide>
+                <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/projects">
-                            <img
-                                src="@/assets/imgs/projects.png"
-                                alt="Icone Menu"
-                                class="nav__icons"
-                            />
+                            <icon name="file-code-o" color="#fff" size="30"/>
                         </router-link></div
                 ></swiper-slide>
-                <swiper-slide>
+                <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/skills">
-                            <img
-                                src="@/assets/imgs/competence.png"
-                                alt=""
-                                class="nav__icons"
-                            />
+                            <icon name="html-five2" color="#fff" size="30"/>
                         </router-link></div
                 ></swiper-slide>
-                <swiper-slide>
+                <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/contact">
-                            <img
-                                src="@/assets/imgs/about.png"
-                                alt=""
-                                class="nav__icons"
-                            />
+                            <icon name="phone" color="#fff" size="30"/>
                         </router-link></div
                 ></swiper-slide>
             </swiper>
@@ -85,6 +62,7 @@ import 'swiper/css'
 
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
+import Icon from "@/components/Icon.vue";
 
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper'
@@ -93,46 +71,47 @@ export default {
     components: {
         Swiper,
         SwiperSlide,
+        Icon
     },
     setup() {
         return {
-            modules: [EffectCoverflow, Pagination],
+            modules: [EffectCoverflow, Pagination]
         }
     },
 }
 </script>
 <style>
-.swiper {
+.swiper .swiperNav {
     width: 100%;
-position: absolute;
-z-index: 2;
-
-  }
-
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 4rem;
-    height:4rem;
+    height:100%;
     padding: 0.5rem 0.5rem 0;
   }
-.swiper-slide-active {
-    transform: scale(1.35);
-}
-  .swiper-slide img {
-    display: block;
-    width: 2.5rem;
+.swiper-slide .swiperSlide-Nav. {
+    width:3.8rem;
+  } 
+.swiperSlide-Nav {
+    background-position: center;
+    background-size: cover;
+    height: 3rem;
+    width: 3.8rem;
+    /* padding: 0.5rem 0.5rem 0; */
+    margin-top: 0.5rem;
   }
+.swiper-slide-active {
+    transform: scale(1.1);
+}
+/* .swiper-wrapper {
+    padding-left: 1rem;
+} */
   .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom:0;
-
   }
   .swiper-pagination-bullet-active {
     background: var(--flashBlue);
   }
 
 #nav__container--notMobile {
-    width: 12%;
+    width: 10%;
     position: absolute;
     bottom: -2rem;
     height: 4rem;
@@ -146,26 +125,19 @@ z-index: 2;
 }
 #nav__container--notMobile:hover {
     transition: 0.5s;
-    bottom:0
+    bottom: 0;
 }
 .nav__icons {
     max-width: 100%;
     transition: 2s;
 }
-.nav__icons:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-}
-.nav__iconDiv {
-    width: 2.5rem;
-}
+
 #nav {
     box-sizing: border-box;
     display: flex;
-    gap: 0.5rem;
     align-items: center;
 }
-@media screen and (max-width : 768px){
+@media screen and (max-width : 1250px){
 #nav__container--notMobile {
    display: none;
 }

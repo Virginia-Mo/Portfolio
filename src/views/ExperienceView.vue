@@ -6,7 +6,7 @@
         </div>
             <div id="education__line"></div>
             <div id="decoline"></div>
-            <div id="education__detailsDiv">
+            <div class="education__detailsDiv" v-if="isFrench">
             <p class="education__p">
                 <span class="education__dates">Octobre 22 à Décembre 22</span> -
                 <span class="education__school">École O'Clock</span><br>
@@ -15,13 +15,30 @@
             <p class="education__p">
                 <span class="education__dates">Mai 22 à Août 22</span> -
                 <span class="education__school">École O'Clock</span><br>
-                Formation de développeuse web et mobile Fullstack <b>Javascript</b>.
+                Formation de développeuse web et mobile Fullstack <strong>Javascript</strong>.
             </p>
             <p class="education__p">
                 <span class="education__dates">2010-2013</span> -
                 <span class="education__school">IFSI Ambroise Paré, Boulogne Billancourt</span><br>
                 École Infirmière. 
             </p></div>
+            <div class="education__detailsDiv" v-if="isEnglish">
+            <p class="education__p">
+                <span class="education__dates">October 22 to December 22</span> -
+                <span class="education__school">O'Clock school</span><br>
+                React course and team project.
+            </p>
+            <p class="education__p">
+                <span class="education__dates">May 22 to August 22</span> -
+                <span class="education__school">O'Clock school</span><br>
+                Web developer -Fullstack <strong>Javascript</strong>- course.
+            </p>
+            <p class="education__p">
+                <span class="education__dates">2010-2013</span> -
+                <span class="education__school">IFSI Ambroise Paré, Boulogne Billancourt</span><br>
+                Nursing school
+            </p></div>
+
 <div id="decoImage">
     <img src="@/assets/imgs/round2.png" alt="image de décoration" id="decoImg">
 </div>
@@ -39,7 +56,7 @@
             <div class="experience__line" id="lastLine"></div>
 
         </div>
-            <div id="experience__detailsDiv">
+            <div class="experience__detailsDiv" v-if="isFrench">
             <p class="experience__p">
                 <span class="experience__dates">Novembre 2022 à décembre 2022</span> -
                 <span class="experience__school">École O'Clock</span><br>
@@ -61,6 +78,29 @@
                </ul>
             </p>
         </div>
+        <div class="experience__detailsDiv" v-if="isEnglish">
+            <p class="experience__p">
+                <span class="experience__dates">November 2022 to December 2022</span> -
+                <span class="experience__school">O'Clock school</span><br>
+                Making of a project with a team.
+            </p>
+            <p class="experience__p">
+                <span class="experience__dates">October 2021 to April 2022, January 2019 to November 2020</span> -
+                <span class="experience__school">92800,Puteaux</span><br>
+                Nurse in a lab: taking blood, mycological and bacteriological samples; technical help.
+            </p>
+            <p class="experience__p" id="last__p">
+                <span class="experience__dates">2013 à 2018</span> -
+                <span class="experience__school">92100,Boulogne Billancourt</span><br>
+               Nurse in paediatric ward : 
+               <ul>
+                <li>Hospitalization: babies/kids</li>
+                <li>Emergency department (paediatric)</li>
+                <li>Psychiatric ward for teenagers</li>
+               </ul>
+            </p>
+        </div>
+
         </div>
     </section>
 </div>
@@ -71,9 +111,17 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import NavBarTop from '@/components/NavBarTop.vue'
+
+import { mapState } from 'pinia'
+import { getLanguage } from '@/stores/getLanguage.js'
+
+
 export default {
     name : "experiencePortfolio",
-    components : { NavBar, NavBarTop }
+    components : { NavBar, NavBarTop },
+    computed : {
+...mapState(getLanguage,["isEnglish", "isFrench"])
+},
 }
 </script>
 <style scoped>
@@ -106,7 +154,7 @@ height: 100vh;
     margin: -11% 0 0 1rem;
     transform: rotate(356deg);
 }
-#education__detailsDiv {
+.education__detailsDiv {
     color: var(--darkBrown);
     font-family: var(--font-poppins);
     margin: 3rem;
@@ -154,7 +202,7 @@ margin: 1rem auto;
     transform: rotate(348deg);
     margin: -1.5rem auto;
 }
-#experience__detailsDiv {
+.experience__detailsDiv {
     font-size: 1.2rem;
     font-family: var(--font-poppins);
     margin: 4rem 1rem 1rem;

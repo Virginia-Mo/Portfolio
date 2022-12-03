@@ -1,0 +1,98 @@
+/* COMPONENTS MAIN STYLES */
+.Projects__p {
+    color: var(--darkBrown);
+}
+.Projects__h1 {
+    font-family: var(--font-brittany);
+    color: var(--flashBlue);
+    font-size: 4rem;
+    text-align: center;
+    padding: 5rem 5rem 3rem;
+}
+.Projects__underline {
+    width: 32%;
+    height: 0.1rem;
+    background-color: var(--darkBrown);
+    margin: 0 auto 2rem;
+}
+
+.Projects__detailsContainer {
+    font-family: var(--font-poppins);
+    color: var(--darkBrown);
+    margin: 3rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+.projectsContainers {
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.projects__imgDiv {
+    background-color: var(--grey);
+    border: solid 3px var(--darkBrown);
+    height: auto;
+    width: 37%;
+    padding: 2rem 2rem;
+    margin: 0 auto;
+}
+
+@media screen and (min-width : 1250px){
+ .Projects__mainDiv {
+      display: flex;
+    flex-direction: row-reverse;
+    }
+ .Projects__firstdiv, .Projects__secondDiv {
+    flex: 1;
+}
+.Projects__h1 {
+    text-align: left;
+    font-size: 6rem;
+}
+.Projects__underline{
+    margin: 0;
+}
+.Projects__detailsContainer {
+    width: 73%;
+}
+.projects__kdcContainer {
+   width: 100%;
+   margin: 1.5rem 0 0 1.5rem;
+}
+}
+@media screen and (min-width: 1024px) {
+
+    #projects__middleLine {
+        width: 17%;
+    }
+    #projects__titlesContainer {
+        width: 30%;
+    }
+    #projects__rightside {
+        display: flex;
+        width: 60%;
+        background-image: url('@/assets/imgs/bgprojets.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    #projects__imgContainer {
+        width: 25rem;
+        background-color: var(--grey);
+        height: 29rem;
+        margin: 20% 0;
+        padding: 2rem 3rem;
+        border: solid 2px var(--darkBrown);
+    }
+    #projects__img {
+        max-width: 100%;
+        margin: auto;
+    }
+    #projects__lineRight {
+        width: 35%;
+        height: 0.2rem;
+        display: flex;
+        margin-top: 26rem;
+        background-color: var(--darkBrown);
+    }
+}
