@@ -50,6 +50,19 @@ export default {
 }
 </script>
 <style>
+.button__OpenModal {
+    background-color: var(--grey);
+    border: solid 2px var(--lightBlue);
+    border-radius: 10px;
+    color: var(--darkBrown);
+    padding: 0.5rem;
+    font-weight: bold;
+}
+.button__OpenModal:hover {
+    background-color: #c0b295;
+    color: var(--flashBlue);
+    cursor: pointer;
+}
 .mousescroll__notMobile {
     display: none;
 }
@@ -91,6 +104,8 @@ margin-top: 5rem;
 }
 #projects__aboutHome {
     position: fixed;
+    top: 1rem;
+    left: 1rem;
 }
 #projects__middleLine {
     width: 35%;

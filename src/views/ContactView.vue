@@ -9,27 +9,41 @@
             <div id="contact__detailsDiv">
                 <div class="contact__details">
                     <div class="contact__imgContainer">
-                        <icon class="icons__contact" name="phone" :size="50" color="#cbf7f8" />
+                        <icon
+                            class="icons__contact"
+                            name="phone"
+                            :size="40"
+                            color="#cbf7f8"
+                        />
                     </div>
                     <p class="contact__p">: 06.73.31.48.88</p>
                 </div>
                 <div class="contact__details">
                     <div class="contact__imgContainer">
-                        <icon class="icons__contact" name="envelop" :size="50" color="#cbf7f8" />
+                        <icon
+                            class="icons__contact"
+                            name="envelop"
+                            :size="40"
+                            color="#cbf7f8"
+                        />
                     </div>
                     <p class="contact__p">: antonio.vir@hotmail.com</p>
                 </div>
                 <div class="contact__details">
                     <div class="contact__imgContainer">
-                        <icon class="icons__contact" name="sphere" :size="50" color="#cbf7f8" />
+                        <icon
+                            class="icons__contact"
+                            name="sphere"
+                            :size="40"
+                            color="#cbf7f8"
+                        />
                     </div>
                     <p class="contact__p">
-                        <router-link to="https://github.com/Virginia-Mo"
-                            >GitHub</router-link
+                        <a href="https://github.com/Virginia-Mo"
+                            >GitHub</a
                         >
-                        <router-link
-                            to="https://www.linkedin.com/in/virginia-mo/"
-                            >LinkedIn</router-link
+                        <a href="https://www.linkedin.com/in/virginia-mo/"
+                            >LinkedIn</a
                         >
                     </p>
                 </div>
@@ -41,7 +55,7 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import NavBarTop from '@/components/NavBarTop.vue'
-import Icon from "@/components/Icon.vue";
+import Icon from '@/components/Icon.vue'
 
 export default {
     name: 'contactPortfolio',
@@ -77,13 +91,13 @@ export default {
     max-width: 100%;
 }
 .contact__imgContainer {
-    width: 5rem;
-    height: 5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     background-color: var(--flashBlue);
     border-radius: 50%;
 }
 .icons__contact {
-margin: 1rem;
+    margin: 0.5rem 0 0 0.8rem;
 }
 .contact__details {
     padding: 1rem 0;
@@ -140,8 +154,7 @@ margin: 1rem;
         font-size: 2.2rem;
     }
     .contact__imgContainer {
-        width: 5rem;
+        width: 4rem;
     }
 }
-
 </style>

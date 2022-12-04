@@ -1,7 +1,7 @@
 <template>
-    <Teleport to="#app">  
-        <div class="Projects_imgContainer animate__animated animate__zoomIn">
-            <button @click="handleModalKDC" class="button__closeModal">
+    
+        <div class="Projects_imgContainer test animate__animated animate__zoomIn">
+            <button @click="handleModal" class="button__closeModal">
                 X
             </button>
            
@@ -13,15 +13,15 @@
                 class="slideOverview"
             >
                 <swiper-slide class="slideOverview">
-<img class="Projects__back" src="@/assets/imgs/kdc_article.png" alt="apercu du back-office" />
+                    <img class="Projects__back" src="@/assets/imgs/pnb_flavor.png" alt="apercu du back-office" />
                 </swiper-slide>
                 <swiper-slide class="slideOverview">
-<img class="Projects__back" src='@/assets/imgs/kdc_blog.png'  alt="apercu du back-office" />
+                    <img class="Projects__back" src='@/assets/imgs/pnb_order.png'  alt="apercu du back-office" />
                 </swiper-slide>
             </swiper>
        
         </div>
-    </Teleport>
+    
 </template>
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -56,9 +56,10 @@ methods : {
 
 </script>
 <style>
-
-.swiper-slide .slideOverview {
-    width: 80%;
-}
-
-</style>
+.test {
+    position: absolute;
+    z-index: 60;
+    width: 90%;
+    top: 10%;
+    left: 5%;
+}</style>

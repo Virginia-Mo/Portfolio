@@ -1,4 +1,11 @@
 /* COMPONENTS MAIN STYLES */
+.Projects_imgContainer {
+    position: absolute;
+    z-index: 10;
+    width: 80%;
+    top: 10%;
+    left: 5%;
+}
 .Projects__p {
     color: var(--darkBrown);
 }

@@ -4,7 +4,8 @@ export const getLanguage = defineStore('getLanguage', {
     state: () => ({
         isFrench: true,
         isEnglish: false,
-        openModal: false,
+        openModalKDC: false,
+        openModalPNB: false,
     }),
     actions: {
         handleFrench() {
@@ -15,8 +16,11 @@ export const getLanguage = defineStore('getLanguage', {
             this.isEnglish = true
             this.isFrench = false
         },
-        handleModal() {
-            this.openModal = !this.openModal
+        handleModalKDC() {
+            this.openModalKDC = !this.openModalKDC
         },
+        handleModalPNB() {
+            this.openModalPNB = !this.openModalPNB
+        }
     },
 })

@@ -1,6 +1,6 @@
 <template>
     <div id="swiper-container">
-        <swiper  
+        <swiper
             :slidesPerView="1"
             :spaceBetween="30"
             :loop="true"
@@ -8,34 +8,31 @@
             :modules="modules"
             :mousewheel="true"
             :effect="'fade'"
-       class="swiperProjects"
+            class="swiperProjects"
         >
-            <swiper-slide class="swiper-slideProjects"  >
-               <ProjectsPage />
+            <swiper-slide class="swiper-slideProjects">
+                <ProjectsPage />
             </swiper-slide>
-            <swiper-slide class="swiper-slideProjects showNotMobile" >
+            <swiper-slide class="swiper-slideProjects showNotMobile">
                 <KiddyCare />
             </swiper-slide>
-            <swiper-slide class="swiper-slideProjects showNotMobile" >
+            <swiper-slide class="swiper-slideProjects showNotMobile">
                 <Pokedex />
             </swiper-slide>
-            <swiper-slide class="swiper-slideProjects showNotMobile" >
+            <swiper-slide class="swiper-slideProjects showNotMobile">
                 <PopnBubble />
             </swiper-slide>
-        </swiper> 
+        </swiper>
     </div>
-   
-   
 </template>
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
-import { Mousewheel, Pagination,EffectFade } from "swiper";
+import { Mousewheel, EffectFade } from 'swiper'
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/pagination'
-import "swiper/css/effect-fade";
+import 'swiper/css/effect-fade'
 
 import ProjectsPage from '@/components/ProjectsPage.vue'
 import Pokedex from '@/components/Pokedex.vue'
@@ -48,14 +45,13 @@ export default {
         ProjectsPage,
         KiddyCare,
         Pokedex,
-        PopnBubble
+        PopnBubble,
     },
-    setup() {
-    return {
-      modules: [Mousewheel, Pagination,EffectFade],
-    };
-  },
-    
+    data() {
+        return {
+            modules: [Mousewheel, EffectFade],
+        }
+    },
 }
 </script>
 <style>
@@ -63,8 +59,8 @@ export default {
     display: none;
 }
 .swiperProjects {
-  width: 100%;
-  height: 100vh;
+    width: 100%;
+    height: 100vh;
 }
 .swiper-slideProjects {
     height: 100%;
@@ -77,7 +73,6 @@ export default {
   height: 100%;
   object-fit: cover;
 } */
-
 
 /* #swiper-container {
     overflow: hidden;

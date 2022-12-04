@@ -1,4 +1,5 @@
-p<template>
+p
+<template>
     <div
         id="pokedexContainer"
         class="projectsContainers"
@@ -8,68 +9,71 @@ p<template>
         <div class="Projects__underline"></div>
         <div class="Projects__mainDiv">
             <div class="Projects__firstdiv">
-                <div class="projects__imgDiv pokedex__imgDiv">  
-                          <router-link to="https://thepokedexvm.netlify.app/">
-                    <img
-                        src="@/assets/imgs/pkdx.png"
-                        alt="Photo projet Pokedex"
-                        id="pokedex__img"
-                    />
-                </router-link>
+                <div class="projects__imgDiv pokedex__imgDiv">
+                    <a href="https://thepokedexvm.netlify.app/">
+                        <img
+                            src="@/assets/imgs/pkdx.png"
+                            alt="Photo projet Pokedex"
+                            id="pokedex__img"
+                        />
+                    </a>
                 </div>
             </div>
             <div class="Projects__secondDiv">
                 <div class="Projects__detailsContainer">
-                    <p class="Projects__p" v-if="isFrench">
-                        Voici un petit projet que j'ai fait afin de m'entraîner aux appels API.<br/>
-Le bien connu Pokedex ! <br/>
-Les utilisateurs, après avoir ouvert la pokeball, peuvent accéder aux informations de différents pokemon en tapant leur numéro ou nom en anglais.
-Ils peuvent aussi voir les pokemons de façon random en cliquant sur le bouton prévu à cet effet.<br/>
-Les langages utilisés sont HTML5, CSS3 et vanilla JS.<br/>
-Repo Github => <span class="go"><a class="projects__links" href="https://github.com/Virginia-Mo/virginia-mo.github.io"> GO !</a> </span><br/>
-Le projet se trouve ici =><a href="https://thepokedexvm.netlify.app/" class="projects__links">Pokedex</a>.
-</p>
-<p class="Projects__p" v-if="isEnglish">
-    Here's a project I coded to work on API calls (and to get a bit of nostalgia, pokemon was part of my childhood).
-    The world famous Pokedex !
-    Users can, after opening the pokeball, access to all the informations about differents pokemon by taping their number or name (in English).
-    They can also look for Pokemon randmly by clicking the button 
-meant for that purpose.
-Languages used are HTML5, CSS3 and vanilla JS.<br/>
-Repo Github => <span class="go"><a class="projects__links" href="https://github.com/Virginia-Mo/virginia-mo.github.io"> GO !</a> </span><br/>
-You can find it here => <a href="https://thepokedexvm.netlify.app/" class="projects__links">Pokedex</a>.
-    </p>
+                    <p class="Projects__p" v-if="isFrench"> Voici un petit projet que j'ai fait afin de m'entraîner aux appels API.<br /> Le bien connu Pokedex ! <br /> Les utilisateurs, après avoir ouvert la pokeball, peuvent accéder aux informations de différents pokemon en tapant leur numéro ou nom en anglais. Ils peuvent aussi voir les pokemons de façon random en cliquant sur le bouton prévu à cet effet.<br /> Les langages utilisés sont HTML5, CSS3 et vanilla JS.<br />
+                        Repo Github =>
+                        <span class="go"><a
+                                class="projects__links"
+                                href="https://github.com/Virginia-Mo/virginia-mo.github.io">
+                                GO !</a> 
+                            </span><br />
+                        Le projet se trouve ici =><a
+                            href="https://thepokedexvm.netlify.app/"
+                            class="projects__links"
+                            >Pokedex</a
+                        >.
+                    </p>
+                    <p class="Projects__p" v-if="isEnglish"> Here's a project I coded to work on API calls (and to get a bit of nostalgia, pokemon was part of my childhood). The world famous Pokedex ! Users can, after opening the pokeball, access to all the informations about differents pokemon by taping their number or name (in English). They can also look for Pokemon randmly by clicking the button meant for that purpose. Languages used are HTML5, CSS3 and vanilla JS.<br />
+                        Repo Github =>
+                        <span class="go"
+                            ><a
+                                class="projects__links"
+                                href="https://github.com/Virginia-Mo/virginia-mo.github.io">
+                                GO !</a> </span
+                        ><br />
+                        You can find it here =>
+                        <a
+                            href="https://thepokedexvm.netlify.app/"
+                            class="projects__links"
+                            >Pokedex</a>.
+                    </p>
                 </div>
             </div>
-           <NavBarTop />
+            <NavBarTop />
         </div>
         <div id="footerContainer">
-            <MouseScroll class="mousescroll__notMobile mouse_scroll--pokedex"/>
+            <MouseScroll class="mousescroll__notMobile mouse_scroll--pokedex" />
             <footer class="blueFooter blueFooter--pokedex">
-    <router-link to="/projects/kiddycare" class="Projects__arrowDiv">
-        <div
-                    class="arrow arrowLeft"
+                <router-link
+                    to="/projects/kiddycare"
+                    class="Projects__arrowDiv"
                 >
-                &#8592;
-                </div>
-            </router-link>
-                <router-link to="/projects/popnbubble" class="Projects__arrowDiv">
-                <div
-                    class="arrow arrowRight"
+                    <div class="arrow arrowLeft">&#8592;</div>
+                </router-link>
+                <router-link
+                    to="/projects/popnbubble"
+                    class="Projects__arrowDiv"
                 >
-                    &#8594;
-                </div>
-            </router-link>
-            </footer> 
+                    <div class="arrow arrowRight">&#8594;</div>
+                </router-link>
+            </footer>
         </div>
-    </div> 
-     
- 
+    </div>
 </template>
 <script>
 import MouseScroll from '@/components/MouseScroll.vue'
 import NavBarTop from '@/components/NavBarTop.vue'
-
 
 import { mapState } from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
@@ -77,9 +81,9 @@ import { getLanguage } from '@/stores/getLanguage.js'
 export default {
     name: 'Pokedex',
     components: { MouseScroll, NavBarTop },
-    computed : {
-...mapState(getLanguage,["isEnglish", "isFrench"])
-},
+    computed: {
+        ...mapState(getLanguage, ['isEnglish', 'isFrench']),
+    },
     // data() {
     //     return {
     //         displayPnb: false,
@@ -144,7 +148,7 @@ export default {
         margin: -8rem 0 0 17rem;
     }
     #pokedexContainer {
-    background-image: url('@/assets/imgs/bgpokedex.png');
-}
+        background-image: url('@/assets/imgs/bgpokedex.png');
+    }
 }
 </style>

@@ -73,7 +73,7 @@ export default {
         SwiperSlide,
         Icon
     },
-    setup() {
+    data() {
         return {
             modules: [EffectCoverflow, Pagination]
         }

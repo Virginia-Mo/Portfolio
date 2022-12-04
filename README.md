@@ -46,3 +46,10 @@ npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 ```sh
 npm run lint
 ```
+
+
+
+### A FAIRE
+Mettre le css des projets dans mainProjects
+relire les class
+supprimer les composants en trop

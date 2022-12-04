@@ -5,13 +5,13 @@
         <div class="Projects__mainDiv">
             <div class="Projects__firstdiv">
                 <div class="projects__imgDiv popnbubble__imgDiv">
-                    <router-link to="https://popnbubble.netlify.app/" >
+                    <a href="https://popnbubble.netlify.app/" >
                     <img
                         src="@/assets/imgs/logopnb.png"
                         alt="Photo projet popnbubble"
                         id="popnbubble__img"
                     />
-                    </router-link>
+                    </a>
                 </div>
             </div>
             <div class="Projects__secondDiv">
@@ -31,12 +31,18 @@ Les langages utilisés sont : <br/>
 Des améliorations auront bientôt lieu.<br/>
 Repo Github => <span class="go"><a class="projects__links" href="https://github.com/Virginia-Mo/Pop-n-Bubble"> GO !</a> </span><br/>
 Vous pouvez consulter le projet ici => <a href="https://popnbubble.netlify.app/" class="projects__links">Pop'n'Bubble</a> (un petit temps d'attente sera sûrement requis pour l'accès au menu.)
-Pour consulter la partie back-end, merci de me demander les identifiants. Voici un aperçu : 
-
-<!-- <div id="Projects_imgContainer">
-                            <img class="Projects__back" src="@/assets/imgs/pnb_flavor.png" alt="apercu du back-office" />
-                            <img class="Projects__back" src='@/assets/imgs/pnb_order.png'  alt="apercu du back-office" />
-                      </div>   -->
+Pour consulter la partie back-end, merci de me demander les identifiants. Voici un aperçu : <button class="button__OpenModal" @click="handleModalPNB">CLICK</button>
+<Teleport to="#app"  v-if="openModalPNB">  
+        <div class="Projects_imgContainer animate__animated animate__zoomIn">
+            <button @click="handleModalPNB" class="button__closeModal">
+                X
+            </button>
+            <SwiperOverview>
+                <template v-slot:slide1> <img class="Projects__back" src="@/assets/imgs/pnb_flavor.png" alt="apercu du back-office" /></template>      
+                <template v-slot:slide2> <img class="Projects__back" src='@/assets/imgs/pnb_order.png'  alt="apercu du back-office" /></template>
+            </SwiperOverview>   
+        </div>
+    </Teleport>     
 </p>
 
 <p class="Projects__p" id="popnbubble__p" v-if="isEnglish">
@@ -53,11 +59,18 @@ For this project I used the following techs :
 </ul>
 Repo Github => <span class="go"><a class="projects__links" to="https://github.com/Virginia-Mo/Pop-n-Bubble"> GO !</a> </span><br/>
 You can see the result here : <a href="https://popnbubble.netlify.app/" class="projects__links">Pop'n'Bubble</a>(a short waiting time can be needed as the Heroku dynos wake up).
-To check the back-office part, you can ask me the login infos. Here's an overview 
-<!-- <div id="Projects_imgContainer">
-                            <img class="Projects__back" src="@/assets/imgs/pnb_flavor.png" alt="apercu du back-office" />
-                            <img class="Projects__back" src='@/assets/imgs/pnb_order.png'  alt="apercu du back-office" />
-                      </div>   -->
+To check the back-office part, you can ask me the login infos. Here's an overview : <button class="button__OpenModal" @click="handleModal">CLICK</button>
+<Teleport to="#app"  v-if="openModalPNB">  
+        <div class="Projects_imgContainer animate__animated animate__zoomIn">
+            <button @click="handleModalPNB" class="button__closeModal">
+                X
+            </button>
+            <SwiperOverview>
+                <template v-slot:slide1> <img class="Projects__back" src="@/assets/imgs/pnb_flavor.png" alt="apercu du back-office" /></template>      
+                <template v-slot:slide2> <img class="Projects__back" src='@/assets/imgs/pnb_order.png'  alt="apercu du back-office" /></template>
+            </SwiperOverview>   
+        </div>
+    </Teleport>     
                     </p>
                 </div>
             </div>
@@ -80,16 +93,20 @@ To check the back-office part, you can ask me the login infos. Here's an overvie
 <script>
 import NavBar from "@/components/NavBar.vue"
 import NavBarTop from '@/components/NavBarTop.vue'
+import SwiperOverview from './SwiperOverview.vue';
 
-import { mapState } from 'pinia'
+import { mapActions, mapState } from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
 
 export default {
     name: 'PopnBubble',
-    components : { NavBar, NavBarTop },
+    components : { NavBar, NavBarTop, SwiperOverview },
     computed : {
-...mapState(getLanguage,["isEnglish", "isFrench"])
+...mapState(getLanguage,["isEnglish", "isFrench", "openModalPNB"])
 },
+methods : {
+    ...mapActions(getLanguage, ["handleModalPNB"])
+}
 }
 </script>
 
