@@ -259,8 +259,8 @@ li {
     max-width: 100%;
 }
 }
-@media screen and (min-width : 768px){
 
+@media screen and (min-width : 1024px){
 #pageContainer {
     display: flex;
     height: 100vh
@@ -272,8 +272,6 @@ li {
     flex: 1;
     overflow: auto;
 }
-}
-@media screen and (min-width : 1024px){
 
 #experience__img {
     border-radius: 0;

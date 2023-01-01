@@ -6,7 +6,7 @@
         </div>
         <div id="skills__skillsContainer">
             <div id="skills__front" class="skills__div">
-                <h2 class="skills__subtitles animate__animated animate__zoomIn animate__slower">Front-end</h2>
+                <h2 class="skills__subtitles animate__animated animate__fadeIn animate__slower">Front-end</h2>
                 <p class="skills__details">
                     <ul class="skills_ul">
                         <li>HTML</li>
@@ -25,7 +25,7 @@
                 </p>
             </div>
             <div id="skills__back" class="skills__div">
-                <h2 class="skills__subtitles animate__animated animate__zoomIn animate__slower">Back-end</h2>
+                <h2 class="skills__subtitles animate__animated animate__fadeIn animate__slower">Back-end</h2>
                     <p class="skills__details">
                     <ul class="skills_ul">
                         <li>NodeJS</li>
@@ -43,7 +43,7 @@
                 </p>
             </div>
             <div id="skills__soft" class="skills__div">
-                <h2 class="skills__subtitles animate__animated animate__zoomIn animate__slower">Soft Skills</h2>
+                <h2 class="skills__subtitles animate__animated animate__fadeIn animate__slower">Soft Skills</h2>
                 <p class="skills__details">
                     <ul class="skills_ul">
                         <li>Autonome</li>
@@ -53,6 +53,7 @@
                 </p>
             </div>
         </div>
+        
         <NavBarTop />
     <NavBar />
     </div>

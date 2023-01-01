@@ -51,16 +51,15 @@ export default {
 </script>
 <style>
 .button__OpenModal {
-    background-color: var(--grey);
-    border: solid 2px var(--lightBlue);
+    background-color: black;
+    border: solid 2px var(--flashBlue);
     border-radius: 10px;
-    color: var(--darkBrown);
+    color: var(--grey);
     padding: 0.5rem;
     font-weight: bold;
 }
 .button__OpenModal:hover {
-    background-color: #c0b295;
-    color: var(--flashBlue);
+    background-color: var(--lightBrown);
     cursor: pointer;
 }
 .mousescroll__notMobile {

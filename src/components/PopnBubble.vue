@@ -10,6 +10,7 @@
                         src="@/assets/imgs/logopnb.png"
                         alt="Photo projet popnbubble"
                         id="popnbubble__img"
+                        target="_blank"
                     />
                     </a>
                 </div>

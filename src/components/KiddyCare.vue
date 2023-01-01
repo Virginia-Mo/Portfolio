@@ -240,6 +240,10 @@ export default {
     color: #027bff;
     border: solid 2px black;
 }
+.button__closeModal:hover {
+    background-color: #027bff;
+    color: white;
+}
 .display {
     display: none;
 }

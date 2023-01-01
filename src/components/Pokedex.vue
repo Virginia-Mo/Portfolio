@@ -46,7 +46,7 @@ p
                         <a
                             href="https://thepokedexvm.netlify.app/"
                             class="projects__links"
-                            >Pokedex</a>.
+                            target="_blank">Pokedex</a>.
                     </p>
                 </div>
             </div>
