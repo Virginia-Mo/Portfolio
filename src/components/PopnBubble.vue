@@ -77,35 +77,34 @@ To check the back-office part, you can ask me the login infos. Here's an overvie
             </div>
          <NavBarTop />
         </div>
-        <NavBar />
+
         <MouseScroll class="mouseScroll__notMobile"/>
 <footer class="blueFooter">
+            
     <router-link to="/projects/pokedex" class="Projects__arrowDiv">
-        <div
-                    class="arrow arrowLeft"
-                >
-                &#8592;
-                </div>
-            </router-link>
+                    <div class="arrow arrowLeft">&#8592;</div>
+                </router-link>
+                <router-link to="/projects/madjikarite" class="Projects__arrowDiv">
+                    <div class="arrow arrowRight">&#8594;</div>
+                </router-link>
             
             </footer> 
     </div>
 </template>
 <script>
-import NavBar from "@/components/NavBar.vue"
 import NavBarTop from '@/components/NavBarTop.vue'
 import SwiperOverview from './SwiperOverview.vue';
-
+import MouseScroll from "./MouseScroll.vue";
 import { mapActions, mapState } from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
 
 export default {
     name: 'PopnBubble',
-    components : { NavBar, NavBarTop, SwiperOverview },
+    components : { NavBarTop, SwiperOverview, MouseScroll },
     computed : {
 ...mapState(getLanguage,["isEnglish", "isFrench", "openModalPNB"])
 },
-methods : {
+    methods : {
     ...mapActions(getLanguage, ["handleModalPNB"])
 }
 }

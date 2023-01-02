@@ -53,6 +53,11 @@ const router = createRouter({
             component: () => import('../components/PopnBubble.vue'),
         },
         {
+            path: '/projects/madjikarite',
+            name: 'projectsMadjikarite',
+            component: () => import('../components/Madjikarité.vue'),
+        },
+        {
             path: '/contact',
             name: 'contactPortfolio',
             component: () => import('../views/ContactView.vue'),

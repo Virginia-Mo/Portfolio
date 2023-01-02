@@ -22,6 +22,9 @@
             <swiper-slide class="swiper-slideProjects showNotMobile">
                 <PopnBubble />
             </swiper-slide>
+            <swiper-slide class="swiper-slideProjects showNotMobile">
+                <Madjikarité />
+            </swiper-slide>
         </swiper>
     </div>
 </template>
@@ -38,15 +41,18 @@ import ProjectsPage from '@/components/ProjectsPage.vue'
 import Pokedex from '@/components/Pokedex.vue'
 import KiddyCare from '@/components/KiddyCare.vue'
 import PopnBubble from '@/components/PopnBubble.vue'
+import Madjikarité from '@/components/Madjikarité.vue'
+
 export default {
     components: {
-        Swiper,
-        SwiperSlide,
-        ProjectsPage,
-        KiddyCare,
-        Pokedex,
-        PopnBubble,
-    },
+    Swiper,
+    SwiperSlide,
+    ProjectsPage,
+    KiddyCare,
+    Pokedex,
+    PopnBubble,
+    Madjikarité
+},
     data() {
         return {
             modules: [Mousewheel, EffectFade],

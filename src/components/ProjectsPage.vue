@@ -15,7 +15,8 @@
             <nav class="nav__projects">
     <router-link class="nav__projects--a" to="/projects/kiddycare"> &#x2794; KiddyCare</router-link>
     <router-link class="nav__projects--a" to="/projects/pokedex">&#x2794; Pokedex</router-link>
-    <router-link class="nav__projects--a" to="/projects/popnbubble"> &#x2794; Pop'n'Bubble</router-link> 
+    <router-link class="nav__projects--a" to="/projects/popnbubble"> &#x2794; Pop'n'Bubble</router-link>
+    <router-link class="nav__projects--a" to="/projects/madjikarite"> &#x2794; Madjikarité</router-link>  
 </nav>
         </div>
         <div id="projects__rightside">

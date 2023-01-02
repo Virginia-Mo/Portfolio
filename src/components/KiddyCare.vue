@@ -22,18 +22,54 @@
             <div class="Projects__secondDiv">
                 <div class="Projects__detailsContainer projects__kdcContainer">
                     <p class="Projects__p" v-if="isFrench">
-                        Kiddycare est un projet pour une école (qui n'existe pas). Ce site permet aux utilisateurs de s'informer sur ce que l'école a à offrir, lire les dernières nouvelles grâce à un blog et interagir avec les professeurs et l'équipe administrative de l'école via des messages et commentaires. <br />
+                        Kiddycare est un projet pour une école (qui n'existe
+                        pas). Ce site permet aux utilisateurs de s'informer sur
+                        ce que l'école a à offrir, lire les dernières nouvelles
+                        grâce à un blog et interagir avec les professeurs et
+                        l'équipe administrative de l'école via des messages et
+                        commentaires. <br />
 
-                        Pour accéder aux demandes des parents, l'équipe administrative et les professeurs ont une partie de back-office. Ils n'ont cependant pas les mêmes droits : l'équipe administrative a accès à toutes les fonctionnalités alors que les professeurs n'ont accès qu'aux fonctionnalités du blog (créer et supprimer un article et ses commentaires.)<br /> J'ai codé ce projet en suivant une maquette graphique trouvée sur Internet (les copyrights sont dans le footer du site.).
-                        <strong>Je n'ai utilisé aucun code contenu dans le template.</strong> Le site est responsive et s'adapte à tous types d'appareil. <br /> - > Pour le back-end, j'ai utilisé NodejS avec Express. L'architecture est un MVC, la base de donnée est PostgreSQL avec Sequelize. Views rendues avec EJS.
+                        Pour accéder aux demandes des parents, l'équipe
+                        administrative et les professeurs ont une partie de
+                        back-office. Ils n'ont cependant pas les mêmes droits :
+                        l'équipe administrative a accès à toutes les
+                        fonctionnalités alors que les professeurs n'ont accès
+                        qu'aux fonctionnalités du blog (créer et supprimer un
+                        article et ses commentaires.)<br />
+                        J'ai codé ce projet en suivant une maquette graphique
+                        trouvée sur Internet (les copyrights sont dans le footer
+                        du site.).
+                        <strong>Je n'ai utilisé aucun code contenu dans le
+                            template.</strong>
+                        Le site est responsive et s'adapte à tous types
+                        d'appareil. <br />
+                        - > Pour le back-end, j'ai utilisé NodejS avec Express.
+                        L'architecture est un MVC, la base de donnée est
+                        PostgreSQL avec Sequelize. Views rendues avec EJS.
                         <br />
-                        <strong>Une refonte de ce projet est en cours : Le front-end sera fait en React JS et les données du back-end transformé en API json.</strong><br />
+                        <strong
+                            >Une refonte de ce projet est en cours : Le
+                            front-end sera fait en React JS et les données du
+                            back-end transformé en API json.</strong><br />
                         Repo Github =>
                         <span class="go">
-                            <a class="projects__links"  href="https://github.com/Virginia-Mo/kiddycare">
-                                GO !</a> </span><br />
+                            <a
+                                class="projects__links"
+                                href="https://github.com/Virginia-Mo/kiddycare"
+                            >
+                                GO !</a
+                            > </span><br />
                         Le site est en ligne ici =>
-                        <a class="projects__links" href="/http://kiddycare.herokuapp.com/" > kiddycare.herokuapp.com</a> (un petit temps d'attente est necessaire selon les dynos d'Heroku) Pour consulter la partie back-end, merci de me demander les identifiants. Vous pouvez voir un apercu ici :
+                        <a
+                            class="projects__links"
+                            href="/http://kiddycare.herokuapp.com/"
+                        >
+                            kiddycare.herokuapp.com</a
+                        >
+                        (un petit temps d'attente est necessaire selon les dynos
+                        d'Heroku) Pour consulter la partie back-end, merci de me
+                        demander les identifiants. Vous pouvez voir un apercu
+                        ici :
                         <button
                             class="button__OpenModal"
                             @click="handleModalKDC"
@@ -56,38 +92,71 @@
                                         <img
                                             class="Projects__back"
                                             src="@/assets/imgs/kdc_article.png"
-                                            alt="apercu du back-office"/>
-                                        </template>
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
 
                                     <template v-slot:slide2>
                                         <img
                                             class="Projects__back"
                                             src="@/assets/imgs/kdc_blog.png"
-                                            alt="apercu du back-office"/>
-                                        </template>
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
                                 </SwiperOverview>
                             </div>
                         </Teleport>
                     </p>
-                    <p class="Projects__p" v-if="isEnglish"> Here's a project for a -non-existing- school : KiddyCare ! A website giving the possibilities to targeted users (parents) to get details about the school through the different pages, request a Newsletter, book a class,leave comments for each articles posted in the school blog and leave a message.<br /> To access to all of those requests from users, the school manager and teachers have a back-office part. They don't have the same rights though : the school manager (admin) can access to everything whereas the teachers can only create/remove articles and related comments. <br /> I coded the front-end with HTML, CSS and Vanilla Javascript following the design of a template (link of copyrights are in the footer).
+                    <p class="Projects__p" v-if="isEnglish">
+                        Here's a project for a -non-existing- school : KiddyCare
+                        ! A website giving the possibilities to targeted users
+                        (parents) to get details about the school through the
+                        different pages, request a Newsletter, book a
+                        class,leave comments for each articles posted in the
+                        school blog and leave a message.<br />
+                        To access to all of those requests from users, the
+                        school manager and teachers have a back-office part.
+                        They don't have the same rights though : the school
+                        manager (admin) can access to everything whereas the
+                        teachers can only create/remove articles and related
+                        comments. <br />
+                        I coded the front-end with HTML, CSS and Vanilla
+                        Javascript following the design of a template (link of
+                        copyrights are in the footer).
                         <strong>
-                            I didn't use any code given in the template.The project is fully responsive.</strong><br />
- For the back-end part, I used NodeJS with Express. The architecture used is a MVC. For the datas, I used a relational database system : PostgreSQL. To access to those datas, I used Sequelize and made the views with EJS.
+                            I didn't use any code given in the template.The
+                            project is fully responsive.</strong
+                        ><br />
+                        For the back-end part, I used NodeJS with Express. The
+                        architecture used is a MVC. For the datas, I used a
+                        relational database system : PostgreSQL. To access to
+                        those datas, I used Sequelize and made the views with
+                        EJS.
                         <br />
-                        <strong>I'm currently working on improving this project : The front-end will be done with ReactJS and datas will be rendered through a JSON type API.</strong>
+                        <strong
+                            >I'm currently working on improving this project :
+                            The front-end will be done with ReactJS and datas
+                            will be rendered through a JSON type API.</strong
+                        >
                         Repo Github =>
                         <span class="go">
                             <a
                                 class="projects__links"
-                                href="https://github.com/Virginia-Mo/Project_Shool_KiddyCare">
-                                GO !</a> </span><br />
+                                href="https://github.com/Virginia-Mo/Project_Shool_KiddyCare"
+                            >
+                                GO !</a
+                            > </span
+                        ><br />
                         The project is deployed on Heroku at this adress :
                         <a
                             class="projects__links"
                             href="http://kiddycare.herokuapp.com/"
                         >
                             kiddycare.herokuapp.com</a
-                        > (a short waiting time can be needed as the Heroku dynos wake up). To check the back-office part, you can ask me the login infos. Here's an overview :
+                        >
+                        (a short waiting time can be needed as the Heroku dynos
+                        wake up). To check the back-office part, you can ask me
+                        the login infos. Here's an overview :
                         <button
                             class="button__OpenModal"
                             @click="handleModalKDC"

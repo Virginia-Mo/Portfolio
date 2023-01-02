@@ -157,7 +157,7 @@ height: 100vh;
 .education__detailsDiv {
     color: var(--darkBrown);
     font-family: var(--font-poppins);
-    margin: 3rem;
+    margin: 3rem 4rem;
     font-size: 1.5rem;
    line-height: 2.3rem;
 }
@@ -272,7 +272,9 @@ li {
     flex: 1;
     overflow: auto;
 }
-
+.education__detailsDiv {
+    margin: 4rem 8rem;
+}
 #experience__img {
     border-radius: 0;
 }
