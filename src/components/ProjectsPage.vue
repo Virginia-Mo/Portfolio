@@ -2,7 +2,7 @@
     <div id="projects__container">
         <div id="projects__aboutHome">
             <router-link to="/menu">
-                <icon name="home" color="#fff" size="30"/>
+                <icon name="home" color="#fff" size="30" />
             </router-link>
         </div>
         <div id="projects__middleLine"></div>
@@ -11,13 +11,24 @@
                 <span id="my">MY</span>
                 <span id="projects">Projects</span>
             </h1>
-            <MouseScroll class="mousescroll__notMobile mouse_scroll--pokedex"/>
+            <MouseScroll class="mousescroll__notMobile mouse_scroll--pokedex" />
             <nav class="nav__projects">
-    <router-link class="nav__projects--a" to="/projects/kiddycare"> &#x2794; KiddyCare</router-link>
-    <router-link class="nav__projects--a" to="/projects/pokedex">&#x2794; Pokedex</router-link>
-    <router-link class="nav__projects--a" to="/projects/popnbubble"> &#x2794; Pop'n'Bubble</router-link>
-    <router-link class="nav__projects--a" to="/projects/madjikarite"> &#x2794; Madjikarité</router-link>  
-</nav>
+                <router-link class="nav__projects--a" to="/projects/kiddycare">
+                    &#x2794; KiddyCare</router-link
+                >
+                <router-link class="nav__projects--a" to="/projects/pokedex"
+                    >&#x2794; Pokedex</router-link
+                >
+                <router-link class="nav__projects--a" to="/projects/popnbubble">
+                    &#x2794; Pop'n'Bubble</router-link
+                >
+                <router-link
+                    class="nav__projects--a"
+                    to="/projects/madjikarite"
+                >
+                    &#x2794; Madjikarité</router-link
+                >
+            </nav>
         </div>
         <div id="projects__rightside">
             <div id="projects__lineRight"></div>
@@ -31,23 +42,19 @@
         </div>
         <NavBar />
     </div>
-   <footer class="blueFooter">
-    <router-link to="/projects/kiddycare">
-                    <div
-                        class="arrowRight"
-                    >
-                        &#8594;
-                    </div>
-                </router-link>
-                </footer> 
+    <footer class="blueFooter">
+        <router-link to="/projects/kiddycare">
+            <div class="arrowRight">&#8594;</div>
+        </router-link>
+    </footer>
 </template>
 <script>
-import MouseScroll from './MouseScroll.vue';
-import Icon from "@/components/Icon.vue";
+import MouseScroll from './MouseScroll.vue'
+import Icon from '@/components/Icon.vue'
 
 export default {
     name: 'ProjectsPage',
-    components : {MouseScroll, Icon}
+    components: { MouseScroll, Icon },
 }
 </script>
 <style>
@@ -69,13 +76,13 @@ export default {
 .nav__projects {
     display: flex;
     flex-direction: column;
-text-align: center;
-margin-top: 5rem;
+    text-align: center;
+    margin-top: 5rem;
 }
 .nav__projects--a {
     text-decoration: none;
     color: var(--lightBrown);
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 1.5rem;
 }
 .Projects__p {
@@ -87,7 +94,8 @@ margin-top: 5rem;
     display: flex;
     justify-content: space-between;
 }
-.arrowRight, .arrowLeft {
+.arrowRight,
+.arrowLeft {
     margin: 0 1rem;
 }
 .arrow {
@@ -125,8 +133,9 @@ margin-top: 5rem;
     color: var(--darkBrown);
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
     margin: 10rem 1rem 0;
+    font-size: 4rem;
 }
 #my {
     font-family: var(--font-forum);
@@ -147,15 +156,16 @@ margin-top: 5rem;
 
 @media screen and (min-width: 1250px) {
     .mousescroll__notMobile {
-    display: block;
-}
-.blueFooter {
-    display: none;
-}
+        display: block;
+    }
+    .blueFooter {
+        display: none;
+    }
     #projects__h1 {
         margin: 50% 15% 0;
         font-size: 7rem;
         text-align: center;
+        gap: 4rem;
     }
     .nav__projects {
         display: none;
@@ -198,5 +208,4 @@ margin-top: 5rem;
         background-color: var(--darkBrown);
     }
 }
-
 </style>

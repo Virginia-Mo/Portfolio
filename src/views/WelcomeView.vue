@@ -27,9 +27,12 @@ import 'animate.css'
 export default {
     mounted() {
         var textWrapper = document.querySelector('.ml2')
+        // eslint-disable-next-line prettier/prettier
         textWrapper.innerHTML = textWrapper.textContent.replace( /\S/g, "<span class='letter'>$&</span>" )
 
-        anime.timeline({ loop: true })
+        // eslint-disable-next-line no-undef
+        anime
+            .timeline({ loop: true })
             .add({
                 targets: '.ml2 .letter',
                 scale: [4, 1],

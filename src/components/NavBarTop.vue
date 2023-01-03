@@ -8,7 +8,10 @@
     <div id="navBarTop--mobile">
         <div class="box">
             <button
-                :class="[{active : isOpenBurger} , {notActive : !isOpenBurger}]"
+                :class="[
+                    { active: isOpenBurger },
+                    { notActive: !isOpenBurger },
+                ]"
                 class="btn"
                 @click="toggleMenu()"
             >
@@ -18,9 +21,10 @@
             </button>
         </div>
         <nav
-        :class="[{menuOpen : isOpenBurger} , {menuClose : !isOpenBurger}]"
-        class="navBarTop__links">
-        <FlagContent />
+            :class="[{ menuOpen: isOpenBurger }, { menuClose: !isOpenBurger }]"
+            class="navBarTop__links"
+        >
+            <FlagContent />
             <router-link class="navLinks" to="/menu">Home</router-link>
             <router-link class="navLinks" to="/about"
                 >A Propos / About</router-link
@@ -41,14 +45,14 @@ import { mapState } from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
 
 import FlagContent from '@/components/FlagContent.vue'
-import Icon from "@/components/Icon.vue";
+import Icon from '@/components/Icon.vue'
 
 export default {
     name: 'NavBarTop',
-    components : {FlagContent, Icon},
-    computed : {
-...mapState(getLanguage,["isEnglish", "isFrench"])
-},
+    components: { FlagContent, Icon },
+    computed: {
+        ...mapState(getLanguage, ['isEnglish', 'isFrench']),
+    },
     data() {
         return {
             isOpenBurger: false,
@@ -63,20 +67,6 @@ export default {
 }
 </script>
 <style>
-/* #navBarTop--mobile {
-    width: 12%;
-    position: absolute;
-    bottom: -2rem;
-    height: 4rem;
-    background-color: var(--lightBrown);
-    /* margin: 0 auto; */
-/* display: flex; */
-/* justify-items: flex-start; */
-/* left: 50%;
-    border-radius: 5px 5px 0 0;
-    transition: 0.5s; */
-/* }  */
-
 #navBarTop--notMobile {
     position: fixed;
     right: 0.5rem;
@@ -104,11 +94,11 @@ export default {
     border-radius: 10px 0 0 10px;
 }
 .menuClose {
-   right: -30rem;
-   transition: right 1s ease;
+    right: -30rem;
+    transition: right 1s ease;
 }
 .menuOpen {
-   right: 0;
+    right: 0;
     transition: right 0.7s cubic-bezier(0.05, 0.15, 0.65, 1.12);
     border: solid 1px black;
 }
@@ -158,7 +148,6 @@ export default {
     border-radius: 50%;
     background: var(--grey);
     box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-
 }
 .btn {
     position: absolute;
@@ -211,7 +200,6 @@ export default {
 .notActive span:nth-child(3) {
     animation: ease 0.7s bottom-2 forwards;
 }
-
 
 @keyframes top {
     0% {

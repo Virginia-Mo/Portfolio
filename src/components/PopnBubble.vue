@@ -5,7 +5,9 @@
         <div class="Projects__mainDiv">
             <div class="Projects__firstdiv">
                 <div class="projects__imgDiv popnbubble__imgDiv">
-                    <a href="https://popnbubble.netlify.app/" >
+                    <a 
+                    target="_blank"
+                     href="https://popnbubble.netlify.app/" >
                     <img
                         src="@/assets/imgs/logopnb.png"
                         alt="Photo projet popnbubble"
@@ -30,8 +32,8 @@ Les langages utilisés sont : <br/>
    <li class="Projects__li">Bibliothèque d'animations : AOS, Animate.css, Swiper.</li>
 </ul>
 Des améliorations auront bientôt lieu.<br/>
-Repo Github => <span class="go"><a class="projects__links" href="https://github.com/Virginia-Mo/Pop-n-Bubble"> GO !</a> </span><br/>
-Vous pouvez consulter le projet ici => <a href="https://popnbubble.netlify.app/" class="projects__links">Pop'n'Bubble</a> (un petit temps d'attente sera sûrement requis pour l'accès au menu.)
+Repo Github => <span class="go"><a target="_blank" class="projects__links" href="https://github.com/Virginia-Mo/Pop-n-Bubble"> GO !</a> </span><br/>
+Vous pouvez consulter le projet ici => <a target="_blank" href="https://popnbubble.netlify.app/" class="projects__links">Pop'n'Bubble</a> (un petit temps d'attente sera sûrement requis pour l'accès au menu.)
 Pour consulter la partie back-end, merci de me demander les identifiants. Voici un aperçu : <button class="button__OpenModal" @click="handleModalPNB">CLICK</button>
 <Teleport to="#app"  v-if="openModalPNB">  
         <div class="Projects_imgContainer animate__animated animate__zoomIn">
@@ -58,8 +60,8 @@ For this project I used the following techs :
     <li class="Projects__li">Back-end : CMS : Strapi, with Cloudinary as a storage place and a PostgreSQL database. Deployed on heroku.</li>
     <li class="Projects__li">Animations librairies : AOS, Animate.css, Swiper.</li>
 </ul>
-Repo Github => <span class="go"><a class="projects__links" to="https://github.com/Virginia-Mo/Pop-n-Bubble"> GO !</a> </span><br/>
-You can see the result here : <a href="https://popnbubble.netlify.app/" class="projects__links">Pop'n'Bubble</a>(a short waiting time can be needed as the Heroku dynos wake up).
+Repo Github => <span class="go"><a target="_blank" class="projects__links" to="https://github.com/Virginia-Mo/Pop-n-Bubble"> GO !</a> </span><br/>
+You can see the result here : <a target="_blank" href="https://popnbubble.netlify.app/" class="projects__links">Pop'n'Bubble</a>(a short waiting time can be needed as the Heroku dynos wake up).
 To check the back-office part, you can ask me the login infos. Here's an overview : <button class="button__OpenModal" @click="handleModal">CLICK</button>
 <Teleport to="#app"  v-if="openModalPNB">  
         <div class="Projects_imgContainer animate__animated animate__zoomIn">
@@ -106,7 +108,9 @@ export default {
 },
     methods : {
     ...mapActions(getLanguage, ["handleModalPNB"])
-}
+},
+mounted() {
+       window.scrollTo(0, 0)},
 }
 </script>
 

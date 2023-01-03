@@ -42,122 +42,148 @@
                             />
                         </div>
                         <p class="contact__p">
-                            <a href="https://github.com/Virginia-Mo">GitHub</a>
-                            <a href="https://www.linkedin.com/in/virginia-mo/"
+                            <a
+                                target="_blank"
+                                href="https://github.com/Virginia-Mo"
+                                >GitHub</a
+                            >
+                            <a
+                                target="_blank"
+                                href="https://www.linkedin.com/in/virginia-mo/"
                                 >LinkedIn</a
                             >
                         </p>
                     </div>
                 </div>
-             
-                    <div class="contactFormDiv" v-if="!confirmMessage">
-                        <h1 class="contactForm__title" v-if="isFrench">Contactez moi !</h1>
-                        <h1 class="contactForm__title" v-if="isEnglish">Message me !</h1>
-                        <form
-                            ref="form"
-                            @submit.prevent="sendEmail"
-                            class="contactForm"
-                        >
-                            <label class="contactForm__label" for="user_name" v-if="isFrench"
-                                >Nom</label
-                            >
-                            <label class="contactForm__label" for="user_name" v-if="isEnglish"
-                                >Last Name</label
-                            >
-                            <input
-                                class="contactForm__input"
-                                type="text"
-                                name="user_name"
-                                required
-                            />
-                            <label
-                                class="contactForm__label"
-                                for="user_firstname"
-                                v-if="isFrench"
-                                >Prénom</label
-                            >
-                            <label
-                                class="contactForm__label"
-                                for="user_firstname"
-                                v-if="isEnglish"
-                                >First Name</label
-                            >
-                            <input
-                                class="contactForm__input"
-                                type="text"
-                                name="user_firstname"
-                                required
-                            />
-                            <label class="contactForm__label" for="user_email"
-                                >Email</label
-                            >
-                            <input
-                                class="contactForm__input"
-                                type="email"
-                                name="user_email"
-                                required
-                            />
-                            <label
-                                class="contactForm__label"
-                                for="subject"
-                                v-if="isFrench"
-                                >Sujet</label
-                            >
-                            <label
-                                class="contactForm__label"
-                                for="subject"
-                                v-if="isEnglish"
-                                >Subject Line</label
-                            >
-                            <input
-                                class="contactForm__input"
-                                type="text"
-                                name="subject"
-                            />
-                            <label class="contactForm__label" for="message"
-                                >Message</label
-                            >
-                            <textarea
-                                name="message"
-                                class="contactForm__input"
-                                id="contactForm__textArea"
-                                required
-                            ></textarea>
-                            <button
-                                class="contactForm__input"
-                                id="contactForm__button"
-                                type="submit"
-                                v-if="isFrench"
-                            >
-                                Envoyer
-                            </button>
-                            <button
-                                class="contactForm__input"
-                                id="contactForm__button"
-                                type="submit"
-                                v-if="isEnglish"
-                            >
-                                Send
-                            </button>
-                        </form>
-                    </div>
-                    <div class="contactFormDiv animate__animated animate__fadeIn" v-if="confirmMessage">
-                        <h1 class="contactForm__title" id="contactForm__thanks" v-if="isFrench">
-                            Merci !
-                        </h1>
-                        <h1 class="contactForm__title" id="contactForm__thanks" v-if="isEnglish">
-                           Thank you !
-                        </h1>
-                        <p class="confirmEmail__p" v-if="isFrench">
-                            Votre message a bien été envoyé, je vous répondrai
-                            dans les plus brefs délais !
-                        </p>
-                        <p class="confirmEmail__p" v-if="isEnglish">
-                            Your message has been sent, I will answer you as
-                            soon as possible !
-                        </p>
-                    </div>
 
+                <div class="contactFormDiv" v-if="!confirmMessage">
+                    <h1 class="contactForm__title" v-if="isFrench">
+                        Contactez moi !
+                    </h1>
+                    <h1 class="contactForm__title" v-if="isEnglish">
+                        Message me !
+                    </h1>
+                    <form
+                        ref="form"
+                        @submit.prevent="sendEmail"
+                        class="contactForm"
+                    >
+                        <label
+                            class="contactForm__label"
+                            for="user_name"
+                            v-if="isFrench"
+                            >Nom</label
+                        >
+                        <label
+                            class="contactForm__label"
+                            for="user_name"
+                            v-if="isEnglish"
+                            >Last Name</label
+                        >
+                        <input
+                            class="contactForm__input"
+                            type="text"
+                            name="user_name"
+                            required
+                        />
+                        <label
+                            class="contactForm__label"
+                            for="user_firstname"
+                            v-if="isFrench"
+                            >Prénom</label
+                        >
+                        <label
+                            class="contactForm__label"
+                            for="user_firstname"
+                            v-if="isEnglish"
+                            >First Name</label
+                        >
+                        <input
+                            class="contactForm__input"
+                            type="text"
+                            name="user_firstname"
+                            required
+                        />
+                        <label class="contactForm__label" for="user_email"
+                            >Email</label
+                        >
+                        <input
+                            class="contactForm__input"
+                            type="email"
+                            name="user_email"
+                            required
+                        />
+                        <label
+                            class="contactForm__label"
+                            for="subject"
+                            v-if="isFrench"
+                            >Sujet</label
+                        >
+                        <label
+                            class="contactForm__label"
+                            for="subject"
+                            v-if="isEnglish"
+                            >Subject Line</label
+                        >
+                        <input
+                            class="contactForm__input"
+                            type="text"
+                            name="subject"
+                        />
+                        <label class="contactForm__label" for="message"
+                            >Message</label
+                        >
+                        <textarea
+                            name="message"
+                            class="contactForm__input"
+                            id="contactForm__textArea"
+                            required
+                        ></textarea>
+                        <button
+                            class="contactForm__input"
+                            id="contactForm__button"
+                            type="submit"
+                            v-if="isFrench"
+                        >
+                            Envoyer
+                        </button>
+                        <button
+                            class="contactForm__input"
+                            id="contactForm__button"
+                            type="submit"
+                            v-if="isEnglish"
+                        >
+                            Send
+                        </button>
+                    </form>
+                </div>
+                <div
+                    class="contactFormDiv animate__animated animate__fadeIn"
+                    v-if="confirmMessage"
+                >
+                    <h1
+                        class="contactForm__title"
+                        id="contactForm__thanks"
+                        v-if="isFrench"
+                    >
+                        Merci !
+                    </h1>
+                    <h1
+                        class="contactForm__title"
+                        id="contactForm__thanks"
+                        v-if="isEnglish"
+                    >
+                        Thank you !
+                    </h1>
+                    <p class="confirmEmail__p" v-if="isFrench">
+                        Votre message a bien été envoyé, je vous répondrai dans
+                        les plus brefs délais !
+                    </p>
+                    <p class="confirmEmail__p" v-if="isEnglish">
+                        Your message has been sent, I will answer you as soon as
+                        possible !
+                    </p>
+                </div>
             </div>
         </div>
         <NavBar />
@@ -168,7 +194,7 @@ import emailjs from '@emailjs/browser'
 import NavBar from '@/components/NavBar.vue'
 import NavBarTop from '@/components/NavBarTop.vue'
 import Icon from '@/components/Icon.vue'
-import 'animate.css';
+import 'animate.css'
 import { mapState } from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
 
@@ -185,7 +211,7 @@ export default {
         Icon,
     },
     computed: {
-        ...mapState(getLanguage,["isEnglish", "isFrench"])
+        ...mapState(getLanguage, ['isEnglish', 'isFrench']),
     },
     methods: {
         sendEmail() {
@@ -210,6 +236,9 @@ export default {
 }
 </script>
 <style>
+.contactFormDiv {
+    margin-top: 5rem;
+}
 .contact__aboutHome {
     position: fixed;
     top: 0;
@@ -219,7 +248,6 @@ export default {
     background-image: url('@/assets/imgs/pgcontact.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 100vh;
     font-family: var(--font-poppins);
 }
 .confirmEmail__p {
@@ -265,6 +293,8 @@ export default {
 }
 #contact__detailsDiv {
     margin-top: 5rem;
+    word-break: break-word;
+    padding-right: 1rem;
 }
 .contact__p {
     color: var(--darkBrown);
@@ -281,6 +311,7 @@ export default {
 }
 .contact__p a:hover {
     transform: scale(1.1);
+    color: var(--flashBlue);
 }
 #contact__aboutHome {
     position: fixed;
@@ -291,13 +322,16 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-right: 2rem;
 }
 .contactForm {
     display: flex;
     flex-direction: column;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
 }
 .contactForm__input {
-    width: 46%;
+    width: 90%;
     height: 2rem;
     border-radius: 5px;
     border: solid 1px var(--lightBrown);
@@ -321,13 +355,13 @@ export default {
     margin-left: 0.5rem;
 }
 #contactForm__button {
-    margin: 2rem 0 0 5rem;
+    margin: 2rem auto;
     background-color: transparent;
     border: solid 1px var(--lightBrown);
     color: var(--grey);
     font-family: var(--font-poppins);
     font-size: 1.4rem;
-    width: 30%;
+    width: 50%;
     height: 2.5rem;
 }
 #contactForm__button:hover {
@@ -335,7 +369,7 @@ export default {
     color: var(--black);
 }
 .contactForm__title {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--flashBlue);
     font-family: var(--font-brittany);
     padding: 0 0 1.5rem 0;
@@ -368,6 +402,16 @@ export default {
     }
     .contactFormDiv {
         margin-top: -5rem;
+    }
+    #contactContainer {
+        height: 100vh;
+    }
+    .contactForm__input {
+        width: 46%;
+    }
+    #contactForm__button {
+        width: 20%;
+        margin: 2rem 6rem;
     }
 }
 </style>

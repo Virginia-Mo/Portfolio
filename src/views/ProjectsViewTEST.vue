@@ -15,7 +15,7 @@
                 <span id="my">MY</span>
                 <span id="projects">Projects</span>
             </h1>
-        <MouseScroll />
+            <MouseScroll />
         </div>
         <div id="projects__rightside">
             <div id="projects__lineRight"></div>
@@ -30,13 +30,13 @@
         <NavBar />
     </div>
     <footer class="blueFooter">
-           <div
-               class="arrowRight"
-               @click="(this.kdc = true), (this.showMainPage = false)"
-           >
-               &#8594;
-           </div>
-       </footer>
+        <div
+            class="arrowRight"
+            @click=";(this.kdc = true), (this.showMainPage = false)"
+        >
+            &#8594;
+        </div>
+    </footer>
     <KiddyCare v-if="kdc" />
 </template>
 <script>

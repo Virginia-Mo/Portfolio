@@ -39,29 +39,35 @@
                         J'ai codé ce projet en suivant une maquette graphique
                         trouvée sur Internet (les copyrights sont dans le footer
                         du site.).
-                        <strong>Je n'ai utilisé aucun code contenu dans le
-                            template.</strong>
+                        <strong
+                            >Je n'ai utilisé aucun code contenu dans le
+                            template.</strong
+                        >
                         Le site est responsive et s'adapte à tous types
                         d'appareil. <br />
                         - > Pour le back-end, j'ai utilisé NodejS avec Express.
-                        L'architecture est un MVC, la base de donnée est
-                        PostgreSQL avec Sequelize. Views rendues avec EJS.
+                        L'architecture est un MVC, la base de donnée est faite
+                        avec PostgreSQL et Sequelize. Views rendues avec EJS.
                         <br />
                         <strong
                             >Une refonte de ce projet est en cours : Le
                             front-end sera fait en React JS et les données du
-                            back-end transformé en API json.</strong><br />
+                            back-end transformé en API json.</strong
+                        ><br />
                         Repo Github =>
                         <span class="go">
                             <a
                                 class="projects__links"
+                                target="_blank"
                                 href="https://github.com/Virginia-Mo/kiddycare"
                             >
                                 GO !</a
-                            > </span><br />
+                            > </span
+                        ><br />
                         Le site est en ligne ici =>
                         <a
                             class="projects__links"
+                            target="_blank"
                             href="/http://kiddycare.herokuapp.com/"
                         >
                             kiddycare.herokuapp.com</a
@@ -142,6 +148,7 @@
                         <span class="go">
                             <a
                                 class="projects__links"
+                                target="_blank"
                                 href="https://github.com/Virginia-Mo/Project_Shool_KiddyCare"
                             >
                                 GO !</a
@@ -150,6 +157,7 @@
                         The project is deployed on Heroku at this adress :
                         <a
                             class="projects__links"
+                            target="_blank"
                             href="http://kiddycare.herokuapp.com/"
                         >
                             kiddycare.herokuapp.com</a
@@ -212,28 +220,15 @@
 <script>
 import MouseScroll from '@/components/MouseScroll.vue'
 import NavBarTop from '@/components/NavBarTop.vue'
+import SwiperOverview from './SwiperOverview.vue'
 
 import { mapState, mapActions } from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
-// Import Swiper Vue.js components
-//  import { Swiper, SwiperSlide } from "swiper/vue";
 
-// Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/effect-creative";
 import 'animate.css'
 
-// import required modules
-// import {Navigation, Pagination } from "swiper";
-import SwiperOverview from './SwiperOverview.vue'
 export default {
     name: 'KiddyCare',
-    // data() {
-    //     return {
-    //         modules: [Navigation, Pagination],
-    //     }
-    // },
     components: { MouseScroll, NavBarTop, SwiperOverview },
     computed: {
         ...mapState(getLanguage, ['isEnglish', 'isFrench', 'openModalKDC']),
@@ -265,10 +260,11 @@ export default {
         // },
     },
 
-    // mounted() {
-    //     window.addEventListener('wheel', this.handleScroll1)
-    //     window.addEventListener('keydown', this.handleKeyDown1)
-    // },
+    mounted() {
+        window.scrollTo(0, 0)
+        // window.addEventListener('wheel', this.handleScroll1)
+        // window.addEventListener('keydown', this.handleKeyDown1)
+    },
     // unmounted() {
     //     window.removeEventListener('wheel', this.handleScroll1)
     //     window.removeEventListener('keydown', this.handleKeyDown1)

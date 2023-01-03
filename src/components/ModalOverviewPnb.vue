@@ -1,31 +1,34 @@
 <template>
-    
-        <div class="Projects_imgContainer test animate__animated animate__zoomIn">
-            <button @click="handleModal" class="button__closeModal">
-                X
-            </button>
-           
-            <swiper
-                :loop="true"
-                :navigation="true"
-                :grabCursor="true"
-                :modules="modules"
-                class="slideOverview"
-            >
-                <swiper-slide class="slideOverview">
-                    <img class="Projects__back" src="@/assets/imgs/pnb_flavor.png" alt="apercu du back-office" />
-                </swiper-slide>
-                <swiper-slide class="slideOverview">
-                    <img class="Projects__back" src='@/assets/imgs/pnb_order.png'  alt="apercu du back-office" />
-                </swiper-slide>
-            </swiper>
-       
-        </div>
-    
+    <div class="Projects_imgContainer test animate__animated animate__zoomIn">
+        <button @click="handleModal" class="button__closeModal">X</button>
+
+        <swiper
+            :loop="true"
+            :navigation="true"
+            :grabCursor="true"
+            :modules="modules"
+            class="slideOverview"
+        >
+            <swiper-slide class="slideOverview">
+                <img
+                    class="Projects__back"
+                    src="@/assets/imgs/pnb_flavor.png"
+                    alt="apercu du back-office"
+                />
+            </swiper-slide>
+            <swiper-slide class="slideOverview">
+                <img
+                    class="Projects__back"
+                    src="@/assets/imgs/pnb_order.png"
+                    alt="apercu du back-office"
+                />
+            </swiper-slide>
+        </swiper>
+    </div>
 </template>
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { mapState, mapActions} from 'pinia'
+import { mapState, mapActions } from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
 // Import Swiper styles
 import 'swiper/css'
@@ -43,17 +46,16 @@ export default {
     },
     setup() {
         return {
-            modules: [Navigation, Pagination]
+            modules: [Navigation, Pagination],
         }
     },
-    computed : {
-...mapState(getLanguage,["openModal"])
-}, 
-methods : {
-    ...mapActions(getLanguage,["handleModal"])
+    computed: {
+        ...mapState(getLanguage, ['openModal']),
+    },
+    methods: {
+        ...mapActions(getLanguage, ['handleModal']),
+    },
 }
-}
-
 </script>
 <style>
 .test {
@@ -62,4 +64,5 @@ methods : {
     width: 90%;
     top: 10%;
     left: 5%;
-}</style>
+}
+</style>

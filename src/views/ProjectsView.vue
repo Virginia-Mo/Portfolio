@@ -45,14 +45,14 @@ import Madjikarité from '@/components/Madjikarité.vue'
 
 export default {
     components: {
-    Swiper,
-    SwiperSlide,
-    ProjectsPage,
-    KiddyCare,
-    Pokedex,
-    PopnBubble,
-    Madjikarité
-},
+        Swiper,
+        SwiperSlide,
+        ProjectsPage,
+        KiddyCare,
+        Pokedex,
+        PopnBubble,
+        Madjikarité,
+    },
     data() {
         return {
             modules: [Mousewheel, EffectFade],
@@ -72,48 +72,6 @@ export default {
     height: 100%;
     width: 100%;
 }
-
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
-/* #swiper-container {
-    overflow: hidden;
-    height: 100vh;
-}
-.swiper {
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-}
-
-.swiper-slide {
-    overflow: hidden;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    padding: 0.5rem 0.5rem 0;
-}
-.swiper-slide-active {
-    transform: scale(1.35);
-}
-.swiper-slide img {
-    display: block;
-    width: 2.5rem;
-}
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-    bottom: 0;
-}
-.swiper-pagination-bullet-active {
-    background: var(--flashBlue);
-} */
 .projects__links {
     color: var(--grey);
 }

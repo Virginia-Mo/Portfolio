@@ -38,10 +38,10 @@
                 <span class="education__school">IFSI Ambroise Paré, Boulogne Billancourt</span><br>
                 Nursing school
             </p></div>
-
+<!-- 
 <div id="decoImage">
     <img src="@/assets/imgs/round2.png" alt="image de décoration" id="decoImg">
-</div>
+</div> -->
 </section>
         <section id="experience__Container">
             <div id="experience__imgDiv">
@@ -158,8 +158,8 @@ height: 100vh;
     color: var(--darkBrown);
     font-family: var(--font-poppins);
     margin: 3rem 4rem;
-    font-size: 1.5rem;
-   line-height: 2.3rem;
+    font-size:1.1rem;
+    line-height: 1.5rem;
 }
 .education__p {
     margin: 2rem 0;
@@ -176,13 +176,14 @@ height: 100vh;
     display: none;
 }
 #experience__img{
-    max-width: 80%;
+    max-width: 70%;
     border-radius: 20px;
     box-shadow: 0.1rem 0.1rem 0.5rem black;
 }
 #experience__imgDiv {
-width: 21rem;
+width: auto;
 margin: 1rem auto;
+text-align: center;
 }
 #experience__Container {
     background-color: var(--lightBlue);
@@ -203,10 +204,10 @@ margin: 1rem auto;
     margin: -1.5rem auto;
 }
 .experience__detailsDiv {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: var(--font-poppins);
     margin: 4rem 1rem 1rem;
-    line-height: 1.7rem;
+    line-height: 1.5rem;
 }
 .experience__p {
     margin: 1rem;
@@ -227,6 +228,7 @@ li {
 }
 #linesDiv {
     padding-top: 5rem;
+    display: none;
 }
 .experience__line {
     width: 0.2rem;
@@ -257,6 +259,7 @@ li {
 @media screen and (min-width : 400px){
     #experience__img{
     max-width: 100%;
+    width: 70%;
 }
 }
 
@@ -274,6 +277,8 @@ li {
 }
 .education__detailsDiv {
     margin: 4rem 8rem;
+    font-size: 1.5rem;
+   line-height: 2.3rem;
 }
 #experience__img {
     border-radius: 0;
@@ -287,10 +292,19 @@ font-size: 5rem;
     height: 14rem;
     margin: -11% 0 0 4rem;
 }
+#linesDiv {
+    padding-top: 5rem;
+    display: block;
+}
+.experience__detailsDiv {
+    font-size: 1.2rem;
+   line-height: 1.7rem;
+}
+
 }
 @media screen and (min-width : 1300px){
     #experience__imgDiv {
-        width: 27rem;
+        width: 100%;
     }
 #pageContainer {
     background-position: inherit;

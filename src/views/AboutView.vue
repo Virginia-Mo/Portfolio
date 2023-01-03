@@ -33,26 +33,45 @@
                 <div id="About__addedBorder"></div>
             </div>
             <div id="About__detailsContainer">
+                <div></div>
                 <div>
-            </div>
-            <div>
-                <p id="About__details"  v-if="isFrench">
-                    Bonjour ! Je suis Virginia Mo et je viens d'une petite ville
-                    près de Versailles.<br/>
-                    Après avoir travaillé près de 8 ans en tant qu'infirmière, principalement en pédiatrie, j'ai décidé  de changer de voie. À la découverte du développement web, j'ai tout de suite accroché.<br/>
-                     J'ai donc suivi une formation de développeuse web fullstack Javascript chez o'Clock. <br/>
-                    J'ai pu apprendre de nouveaux langages, les bonnes pratiques du code, améliorer ma logique et bien d'autres. Mes expériences professionnelles m'ont permis de développer de la rigueur, du sérieux et l'esprit d'équipe. <br/>
-                    Je suis désormais développeuse web fullstack avec une spécialisation en ReactJS. Je recherche un CDI en tant que développeuse web à partir de janvier 2023.
-                </p>
-                <p id="About__details" v-if="isEnglish">
-                    Hello! I'm Virginia Mo and I come from a little town by
-                    Versailles.<br/>
-                     After working 8 years as a nurse, mainly in the paediatric ward, I decided that it was time for me to change job. After some reseaches, I discovered web development and I immediatly loved it ! So I followed the fullstack web development
-                    course provided by O'clock school.<br />
-                    I learnt new languages, ways to code "clean", to improved my logic and many more. My past professionnal experiences allowed me to develop my thorough and team work spirit.<br />
-                    I'm now a fullstack web developer with a specialisation in ReactJS. I currently prefer Front-end development. I'm looking for a full time job as a web developer from January 2023.
-                </p>
-            </div>
+                    <p id="About__details" v-if="isFrench">
+                        Bonjour ! Je suis Virginia Mo et je viens d'une petite
+                        ville près de Versailles.<br />
+                        Après avoir travaillé près de 8 ans en tant
+                        qu'infirmière, principalement en pédiatrie, j'ai décidé
+                        de changer de voie. À la découverte du développement
+                        web, j'ai tout de suite accroché.<br />
+                        J'ai donc suivi une formation de développeuse web
+                        fullstack Javascript chez o'Clock. <br />
+                        J'ai pu apprendre de nouveaux langages, les bonnes
+                        pratiques du code, améliorer ma logique et bien
+                        d'autres. Mes expériences professionnelles m'ont permis
+                        de développer de la rigueur, du sérieux et l'esprit
+                        d'équipe. <br />
+                        Je suis désormais développeuse web fullstack avec une
+                        spécialisation en ReactJS. Je recherche un CDI en tant
+                        que développeuse web à partir de janvier 2023.
+                    </p>
+                    <p id="About__details" v-if="isEnglish">
+                        Hello! I'm Virginia Mo and I come from a little town by
+                        Versailles.<br />
+                        After working 8 years as a nurse, mainly in the
+                        paediatric ward, I decided that it was time for me to
+                        change job. After some reseaches, I discovered web
+                        development and I immediatly loved it ! So I followed
+                        the fullstack web development course provided by O'clock
+                        school.<br />
+                        I learnt new languages, ways to code "clean", to
+                        improved my logic and many more. My past professionnal
+                        experiences allowed me to develop my thorough and team
+                        work spirit.<br />
+                        I'm now a fullstack web developer with a specialisation
+                        in ReactJS. I currently prefer Front-end development.
+                        I'm looking for a full time job as a web developer from
+                        January 2023.
+                    </p>
+                </div>
             </div>
         </div>
         <div id="About__blueDeco"></div>
@@ -69,9 +88,9 @@ import { getLanguage } from '@/stores/getLanguage.js'
 export default {
     name: 'aboutPortfolio',
     components: { NavBar, NavBarTop },
-    computed : {
-...mapState(getLanguage,["isEnglish", "isFrench"])
-},
+    computed: {
+        ...mapState(getLanguage, ['isEnglish', 'isFrench']),
+    },
 }
 </script>
 <style scoped>
@@ -235,7 +254,7 @@ export default {
     }
 
     #About__blueDeco {
-display: none;
+        display: none;
     }
 }
 @media (min-width: 1024px) {
@@ -263,6 +282,8 @@ display: none;
     }
     #About__details {
         width: 52%;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
     }
     #About__blueDeco,
     #Menu__aboutHome {

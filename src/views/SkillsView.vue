@@ -70,7 +70,7 @@ export default {
 <style>
 #skillMainContainer {
     font-family: var(--font-poppins);
-    margin: 4rem ;
+    margin: 1rem ;
     border: solid 1px var(--lightBrown);
       background-image: url("@/assets/imgs/bgskills.png");
    background-repeat: no-repeat;

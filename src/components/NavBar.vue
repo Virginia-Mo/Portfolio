@@ -15,39 +15,47 @@
                 <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/menu">
-                            <icon name="home" color="#fff" size="30"/>
+                            <icon name="home" color="#fff" size="30" />
                         </router-link>
-                    </div> 
+                    </div>
                 </swiper-slide>
                 <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/about">
-                            <icon name="profile-female" color="#fff" size="30"/>
+                            <icon
+                                name="profile-female"
+                                color="#fff"
+                                size="30"
+                            />
                         </router-link></div
                 ></swiper-slide>
                 <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/experience">
-                            <icon name="study, graduation, hat, college" color="#fff" size="30"/>
+                            <icon
+                                name="study, graduation, hat, college"
+                                color="#fff"
+                                size="30"
+                            />
                         </router-link>
-                            </div>
-                        </swiper-slide>
+                    </div>
+                </swiper-slide>
                 <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/projects">
-                            <icon name="file-code-o" color="#fff" size="30"/>
+                            <icon name="file-code-o" color="#fff" size="30" />
                         </router-link></div
                 ></swiper-slide>
                 <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/skills">
-                            <icon name="html-five2" color="#fff" size="30"/>
+                            <icon name="html-five2" color="#fff" size="30" />
                         </router-link></div
                 ></swiper-slide>
                 <swiper-slide class="swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/contact">
-                            <icon name="phone" color="#fff" size="30"/>
+                            <icon name="phone" color="#fff" size="30" />
                         </router-link></div
                 ></swiper-slide>
             </swiper>
@@ -62,7 +70,7 @@ import 'swiper/css'
 
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
-import Icon from "@/components/Icon.vue";
+import Icon from '@/components/Icon.vue'
 
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper'
@@ -71,11 +79,11 @@ export default {
     components: {
         Swiper,
         SwiperSlide,
-        Icon
+        Icon,
     },
     data() {
         return {
-            modules: [EffectCoverflow, Pagination]
+            modules: [EffectCoverflow, Pagination],
         }
     },
 }
@@ -83,12 +91,12 @@ export default {
 <style>
 .swiper .swiperNav {
     width: 100%;
-    height:100%;
+    height: 100%;
     padding: 0.5rem 0.5rem 0;
-  }
+}
 .swiper-slide .swiperSlide-Nav. {
-    width:3.8rem;
-  } 
+    width: 3.8rem;
+}
 .swiperSlide-Nav {
     background-position: center;
     background-size: cover;
@@ -96,19 +104,22 @@ export default {
     width: 3.8rem;
     /* padding: 0.5rem 0.5rem 0; */
     margin-top: 0.5rem;
-  }
+}
 .swiper-slide-active {
     transform: scale(1.1);
 }
 /* .swiper-wrapper {
     padding-left: 1rem;
 } */
-  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom:0;
-  }
-  .swiper-pagination-bullet-active {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0;
+}
+.swiper-pagination-bullet-active {
     background: var(--flashBlue);
-  }
+}
 
 #nav__container--notMobile {
     width: 10%;
@@ -137,9 +148,9 @@ export default {
     display: flex;
     align-items: center;
 }
-@media screen and (max-width : 1250px){
-#nav__container--notMobile {
-   display: none;
-}
+@media screen and (max-width: 1250px) {
+    #nav__container--notMobile {
+        display: none;
+    }
 }
 </style>

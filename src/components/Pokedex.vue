@@ -10,7 +10,7 @@ p
         <div class="Projects__mainDiv">
             <div class="Projects__firstdiv">
                 <div class="projects__imgDiv pokedex__imgDiv">
-                    <a href="https://thepokedexvm.netlify.app/">
+                    <a target="_blank" href="https://thepokedexvm.netlify.app/">
                         <img
                             src="@/assets/imgs/pkdx.png"
                             alt="Photo projet Pokedex"
@@ -21,32 +21,59 @@ p
             </div>
             <div class="Projects__secondDiv">
                 <div class="Projects__detailsContainer">
-                    <p class="Projects__p" v-if="isFrench"> Voici un petit projet que j'ai fait afin de m'entraîner aux appels API.<br /> Le bien connu Pokedex ! <br /> Les utilisateurs, après avoir ouvert la pokeball, peuvent accéder aux informations de différents pokemon en tapant leur numéro ou nom en anglais. Ils peuvent aussi voir les pokemons de façon random en cliquant sur le bouton prévu à cet effet.<br /> Les langages utilisés sont HTML5, CSS3 et vanilla JS.<br />
+                    <p class="Projects__p" v-if="isFrench">
+                        Voici un petit projet que j'ai fait afin de m'entraîner
+                        aux appels API.<br />
+                        Le bien connu Pokedex ! <br />
+                        Les utilisateurs, après avoir ouvert la pokeball,
+                        peuvent accéder aux informations de différents pokemon
+                        en tapant leur numéro ou nom en anglais. Ils peuvent
+                        aussi voir les pokemons de façon random en cliquant sur
+                        le bouton prévu à cet effet.<br />
+                        Les langages utilisés sont HTML5, CSS3 et vanilla JS.<br />
                         Repo Github =>
-                        <span class="go"><a
+                        <span class="go"
+                            ><a
                                 class="projects__links"
-                                href="https://github.com/Virginia-Mo/virginia-mo.github.io">
-                                GO !</a> 
-                            </span><br />
+                                tagert="_blank"
+                                href="https://github.com/Virginia-Mo/virginia-mo.github.io"
+                            >
+                                GO !</a
+                            > </span
+                        ><br />
                         Le projet se trouve ici =><a
+                            target="_blank"
                             href="https://thepokedexvm.netlify.app/"
                             class="projects__links"
                             >Pokedex</a
                         >.
                     </p>
-                    <p class="Projects__p" v-if="isEnglish"> Here's a project I coded to work on API calls (and to get a bit of nostalgia, pokemon was part of my childhood). The world famous Pokedex ! Users can, after opening the pokeball, access to all the informations about differents pokemon by taping their number or name (in English). They can also look for Pokemon randmly by clicking the button meant for that purpose. Languages used are HTML5, CSS3 and vanilla JS.<br />
+                    <p class="Projects__p" v-if="isEnglish">
+                        Here's a project I coded to work on API calls (and to
+                        get a bit of nostalgia, pokemon was part of my
+                        childhood). The world famous Pokedex ! Users can, after
+                        opening the pokeball, access to all the informations
+                        about differents pokemon by taping their number or name
+                        (in English). They can also look for Pokemon randmly by
+                        clicking the button meant for that purpose. Languages
+                        used are HTML5, CSS3 and vanilla JS.<br />
                         Repo Github =>
                         <span class="go"
                             ><a
                                 class="projects__links"
-                                href="https://github.com/Virginia-Mo/virginia-mo.github.io">
-                                GO !</a> </span
+                                target="_blank"
+                                href="https://github.com/Virginia-Mo/virginia-mo.github.io"
+                            >
+                                GO !</a
+                            > </span
                         ><br />
                         You can find it here =>
                         <a
                             href="https://thepokedexvm.netlify.app/"
+                            :target="_blank"
                             class="projects__links"
-                            target="_blank">Pokedex</a>.
+                            >Pokedex</a
+                        >.
                     </p>
                 </div>
             </div>
@@ -79,8 +106,11 @@ import { mapState } from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
 
 export default {
-    name: 'Pokedex',
+    name: 'PokedexProject',
     components: { MouseScroll, NavBarTop },
+    mounted() {
+        window.scrollTo(0, 0)
+    },
     computed: {
         ...mapState(getLanguage, ['isEnglish', 'isFrench']),
     },

@@ -39,11 +39,11 @@
     </div>
 </template>
 <script>
-import Icon from "@/components/Icon.vue";
+import Icon from '@/components/Icon.vue'
 
 export default {
     name: 'MenuPortfolio',
-    components : { Icon }
+    components: { Icon },
 }
 </script>
 <style>
