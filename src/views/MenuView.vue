@@ -30,7 +30,9 @@
                 <div class="Menu__detailsContainer">
                     <router-link to="/skills" class="Menu__links">
                         <p class="Menu__detailsP" v-if="isEnglish">Skills</p>
-                        <p class="Menu__detailsP" v-if="isFrench">Projets</p>
+                        <p class="Menu__detailsP" v-if="isFrench">
+                            Compétences
+                        </p>
                     </router-link>
                 </div>
                 <div class="Menu__detailsContainer">

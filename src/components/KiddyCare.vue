@@ -10,7 +10,7 @@
         <div class="Projects__mainDiv">
             <div class="Projects__firstdiv">
                 <div class="projects__imgDiv kiddycare__imgDiv">
-                    <a href="https://kiddycare.herokuapp.com/">
+                    <a href="https://kiddycare.herokuapp.com/" target="_blank">
                         <img
                             src="@/assets/imgs/kdc.png"
                             alt="Photo projet KiddyCare"
@@ -59,7 +59,7 @@
                             <a
                                 class="projects__links"
                                 target="_blank"
-                                href="https://github.com/Virginia-Mo/kiddycare"
+                                href="https://github.com/Virginia-Mo/Project_Shool_KiddyCare"
                             >
                                 GO !</a
                             > </span
@@ -68,7 +68,7 @@
                         <a
                             class="projects__links"
                             target="_blank"
-                            href="/http://kiddycare.herokuapp.com/"
+                            href="http://kiddycare.herokuapp.com/"
                         >
                             kiddycare.herokuapp.com</a
                         >

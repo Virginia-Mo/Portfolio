@@ -94,10 +94,10 @@ export default {
     height: 100%;
     padding: 0.5rem 0.5rem 0;
 }
-.swiper-slide .swiperSlide-Nav. {
+.swiper-slide .swiperSlide-Nav {
     width: 3.8rem;
 }
-.swiperSlide-Nav {
+.swiper-slide .swiperSlide-Nav {
     background-position: center;
     background-size: cover;
     height: 3rem;

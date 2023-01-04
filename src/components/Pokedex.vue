@@ -38,7 +38,7 @@ p
                         <span class="go"
                             ><a
                                 class="projects__links"
-                                tagert="_blank"
+                                target="_blank"
                                 href="https://github.com/Virginia-Mo/virginia-mo.github.io"
                             >
                                 GO !</a
