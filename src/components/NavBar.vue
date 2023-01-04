@@ -89,15 +89,13 @@ export default {
 }
 </script>
 <style>
-.swiper .swiperNav {
+.swiperNav {
     width: 100%;
     height: 100%;
     padding: 0.5rem 0.5rem 0;
 }
-.swiper-slide .swiperSlide-Nav {
-    width: 3.8rem;
-}
-.swiper-slide .swiperSlide-Nav {
+
+.swiperSlide-Nav {
     background-position: center;
     background-size: cover;
     height: 3rem;

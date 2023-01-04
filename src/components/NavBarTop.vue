@@ -25,17 +25,16 @@
             class="navBarTop__links"
         >
             <FlagContent />
-            <router-link class="navLinks" to="/menu">Home</router-link>
-            <router-link class="navLinks" to="/about"
-                >A Propos / About</router-link
-            >
+            <router-link class="navLinks" to="/menu">Menu</router-link>
+            <router-link class="navLinks" to="/about" v-if="isEnglish">About</router-link>
+            <router-link class="navLinks" to="/about" v-if="isFrench">A Propos</router-link>
             <router-link class="navLinks" to="/experience"
                 >Experiences</router-link
             >
-            <router-link class="navLinks" to="/projects">Projects</router-link>
-            <router-link class="navLinks" to="/skills"
-                >Compétences / Skills</router-link
-            >
+            <router-link class="navLinks" to="/projects" v-if="isEnglish">Projects</router-link>
+            <router-link class="navLinks" to="/projects" v-if="isFrench">Projets</router-link>
+            <router-link class="navLinks" to="/skills" v-if="isEnglish">Skills</router-link>
+            <router-link class="navLinks" to="/skills" v-if="isFrench">Compétences</router-link>
             <router-link class="navLinks" to="/contact">Contact</router-link>
         </nav>
     </div>
@@ -85,13 +84,14 @@ export default {
     position: fixed;
     top: 0;
     z-index: 5;
-    gap: 3rem;
+    gap: 2.5rem;
     font-size: 1.7rem;
     padding: 2rem 2rem 3rem;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     border-radius: 10px 0 0 10px;
+    font-family: var(--font-forum);
 }
 .menuClose {
     right: -30rem;
@@ -106,7 +106,7 @@ export default {
     color: black;
     border: solid 1px black;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     background-color: var(--grey);
     border-radius: 10px;
     height: 2.5rem;
