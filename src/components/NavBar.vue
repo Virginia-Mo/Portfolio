@@ -12,14 +12,14 @@
                 :modules="modules"
                 class="mySwiper swiperNav"
             >
-                <swiper-slide class="swiperSlide-Nav">
+                <swiper-slide class="swiper-slide swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/menu">
                             <icon name="home" color="#fff" size="30" />
                         </router-link>
                     </div>
                 </swiper-slide>
-                <swiper-slide class="swiperSlide-Nav">
+                <swiper-slide class="swiper-slide swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/about">
                             <icon
@@ -29,7 +29,7 @@
                             />
                         </router-link></div
                 ></swiper-slide>
-                <swiper-slide class="swiperSlide-Nav">
+                <swiper-slide class="swiper-slide swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/experience">
                             <icon
@@ -40,19 +40,19 @@
                         </router-link>
                     </div>
                 </swiper-slide>
-                <swiper-slide class="swiperSlide-Nav">
+                <swiper-slide class="swiper-slide swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/projects">
                             <icon name="file-code-o" color="#fff" size="30" />
                         </router-link></div
                 ></swiper-slide>
-                <swiper-slide class="swiperSlide-Nav">
+                <swiper-slide class="swiper-slide swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/skills">
                             <icon name="html-five2" color="#fff" size="30" />
                         </router-link></div
                 ></swiper-slide>
-                <swiper-slide class="swiperSlide-Nav">
+                <swiper-slide class="swiper-slide swiperSlide-Nav">
                     <div class="nav__iconDiv">
                         <router-link to="/contact">
                             <icon name="phone" color="#fff" size="30" />
@@ -89,13 +89,16 @@ export default {
 }
 </script>
 <style>
+.swiper-slide {
+    width: 4rem;
+}
 .swiperNav {
     width: 100%;
     height: 100%;
     padding: 0.5rem 0.5rem 0;
 }
 
-.swiperSlide-Nav {
+.swiper-slide .swiperSlide-Nav {
     background-position: center;
     background-size: cover;
     height: 3rem;
