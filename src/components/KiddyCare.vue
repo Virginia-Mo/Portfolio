@@ -204,8 +204,8 @@
             </div>
             <NavBarTop />
         </div>
+       <MouseScroll class="mousescroll__notMobile" />
         <div id="footerContainer">
-            <MouseScroll class="mousescroll__notMobile" />
             <footer class="blueFooter">
                 <router-link to="/projects" class="Projects__arrowDiv">
                     <div class="arrow arrowLeft">&#8592;</div>

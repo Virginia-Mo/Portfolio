@@ -11,7 +11,8 @@
         </div> -->
         <NavBarTop />
         <div id="About__titlediv">
-            <h1 id="About__h1">About Me</h1>
+            <h1 id="About__h1" v-if="isEnglish">About Me</h1>
+            <h1 id="About__h1" v-if="isFrench">A Propos</h1>
             <div id="light">
                 <div id="About__line">
                     <span class="l1"></span>
@@ -160,11 +161,11 @@ export default {
     background-color: var(--grey);
 }
 #About__detailsContainer {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: var(--font-poppins);
     color: var(--darkBrown);
     margin: 3rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 #About__blueDeco {
     width: 10rem;
@@ -282,8 +283,8 @@ export default {
     }
     #About__details {
         width: 52%;
-        font-size: 1.1rem;
-        line-height: 1.5rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
     }
     #About__blueDeco,
     #Menu__aboutHome {

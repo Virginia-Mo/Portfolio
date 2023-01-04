@@ -8,8 +8,10 @@
         <div id="projects__middleLine"></div>
         <div id="projects__titlesContainer">
             <h1 id="projects__h1">
-                <span id="my">MY</span>
-                <span id="projects">Projects</span>
+                <span id="my" v-if="isEnglish">MY</span>
+                <span id="projects" v-if="isEnglish">Projects</span>
+                <span id="my" v-if="isFrench">Mes</span>
+                <span id="projects" v-if="isFrench">Projets</span>
             </h1>
             <MouseScroll class="mousescroll__notMobile mouse_scroll--pokedex" />
             <nav class="nav__projects">
@@ -52,9 +54,15 @@
 import MouseScroll from './MouseScroll.vue'
 import Icon from '@/components/Icon.vue'
 
+import { mapState } from 'pinia'
+import { getLanguage } from '@/stores/getLanguage.js'
+
 export default {
     name: 'ProjectsPage',
     components: { MouseScroll, Icon },
+    computed: {
+        ...mapState(getLanguage, ['isEnglish', 'isFrench']),
+    },
 }
 </script>
 <style>
@@ -84,6 +92,7 @@ export default {
     color: var(--lightBrown);
     font-size: 2rem;
     margin-top: 1.5rem;
+    word-break: break-word;
 }
 .Projects__p {
     font-size: 1.1rem;

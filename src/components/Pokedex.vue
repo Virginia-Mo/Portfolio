@@ -20,7 +20,10 @@ p
                 </div>
             </div>
             <div class="Projects__secondDiv">
-                <div class="Projects__detailsContainer">
+                <div
+                    class="Projects__detailsContainer"
+                    id="projects__pokedexDiv"
+                >
                     <p class="Projects__p" v-if="isFrench">
                         Voici un petit projet que j'ai fait afin de m'entraîner
                         aux appels API.<br />
@@ -44,7 +47,7 @@ p
                         Le projet se trouve ici =><a
                             target="_blank"
                             href="https://thepokedexvm.netlify.app/"
-                            class="projects__links"
+                            class="projects__links projects__links--pokedex"
                             >Pokedex</a
                         >.
                     </p>
@@ -155,6 +158,12 @@ export default {
 </script>
 
 <style>
+.projects__links--pokedex {
+    padding-bottom: 8rem;
+}
+#projects__pokedexDiv {
+    height: 100vh;
+}
 .blueFooter--pokedex {
     position: fixed;
     bottom: 0;
@@ -179,6 +188,12 @@ export default {
     }
     #pokedexContainer {
         background-image: url('@/assets/imgs/bgpokedex.png');
+    }
+    #projects__pokedexDiv {
+        height: auto;
+    }
+    .projects__links--pokedex {
+        padding-bottom: 0.5rem;
     }
 }
 </style>

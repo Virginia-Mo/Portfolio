@@ -80,9 +80,12 @@ To check the back-office part, you can ask me the login infos. Here's an overvie
          <NavBarTop />
         </div>
 
-        <MouseScroll class="mouseScroll__notMobile"/>
-<footer class="blueFooter">
-            
+    <MouseScroll class="mouseScroll__notMobile" id="mousePNB"/>
+        
+       <div id="footerContainer">
+
+       <footer class="blueFooter">
+             
     <router-link to="/projects/pokedex" class="Projects__arrowDiv">
                     <div class="arrow arrowLeft">&#8592;</div>
                 </router-link>
@@ -91,6 +94,7 @@ To check the back-office part, you can ask me the login infos. Here's an overvie
                 </router-link>
             
             </footer> 
+       </div>
     </div>
 </template>
 <script>
@@ -129,8 +133,14 @@ mounted() {
 #popnbubble__img {
     width: 100%;
 }
+#mousePNB {
+    display: none;
+}
 
 @media screen and (min-width: 1250px) {
+    #mousePNB {
+    display: block;
+}
     #popnbubble__h1 {
         padding: 5rem 5rem 3rem 26rem;
     }

@@ -1,7 +1,8 @@
 <template>
     <div id="skillMainContainer">
         <div id="skills__titlediv">
-            <h1 id="skills__h1">Skills / Compétences</h1>
+            <h1 id="skills__h1" v-if="isEnglish">Skills</h1>
+            <h1 id="skills__h1" v-if="isFrench">Compétences</h1>
             <div class="Menu__separator"></div>
         </div>
         <div id="skills__skillsContainer">
@@ -45,10 +46,17 @@
             <div id="skills__soft" class="skills__div">
                 <h2 class="skills__subtitles animate__animated animate__fadeIn animate__slower">Soft Skills</h2>
                 <p class="skills__details">
-                    <ul class="skills_ul">
-                        <li>Autonome</li>
-                        <li>Adaptable</li>
+                    <ul class="skills_ul"  v-if="isFrench">
+                        <li>Patience</li>
+                        <li>Auto-apprentissage</li>
                         <li>Curieuse</li>
+                        <li>Empathique</li>
+                    </ul>
+                    <ul class="skills_ul"  v-if="isEnglish">
+                        <li>Patience</li>
+                        <li>Self-learning</li>
+                        <li>Curious</li>
+                        <li>Empathy</li>
                     </ul>
                 </p>
             </div>
@@ -62,9 +70,15 @@
 import NavBar from '@/components/NavBar.vue'
 import NavBarTop from '@/components/NavBarTop.vue'
 
+import { mapState } from 'pinia'
+import { getLanguage } from '@/stores/getLanguage.js'
+
 export default {
     name : "SkillsPortfolio",
-    components : { NavBar, NavBarTop } 
+    components : { NavBar, NavBarTop },
+    computed: {
+        ...mapState(getLanguage, ['isEnglish', 'isFrench']),
+    },
 } 
 </script>
 <style>
@@ -94,15 +108,15 @@ export default {
 .skills__subtitles {
     color: var(--flashBlue);
     font-weight: bold;
-font-size: 2.5rem;
-padding-bottom: 1rem;
+    font-size: 2rem;
+    padding-bottom: 1rem;
 }
 .skills_ul {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: var(--darkBrown);
 }
 .skills__h3 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: var(--lightBlue);
 }
 #skills__aboutHome {
@@ -123,6 +137,15 @@ right: 0;
 }
 #skillMainContainer {
     margin: 3rem 5rem;
+}
+.skills__ul {
+    font-size: 1.6rem;
+}
+.skills__subtitles {
+    font-size: 2.5rem;
+}
+.skills__h3 {
+    font-size: 2.2rem;
 }
 }
 </style>

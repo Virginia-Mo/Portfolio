@@ -2,6 +2,7 @@
     <div id="MenuContainer">
         <div id="MenuContainer2">
             <div id="Menu__HomeContainer">
+                <FlagContent />
                 <router-link to="/">
                     <icon class="" name="home" :size="50" color="#dfd8ca" />
                 </router-link>
@@ -11,7 +12,8 @@
             <section id="Menu__section">
                 <div class="Menu__detailsContainer">
                     <router-link to="/about" class="Menu__links">
-                        <p class="Menu__detailsP">About me / A Propos</p>
+                        <p class="Menu__detailsP" v-if="isEnglish">About me</p>
+                        <p class="Menu__detailsP" v-if="isFrench">A Propos</p>
                     </router-link>
                 </div>
                 <div class="Menu__detailsContainer2">
@@ -21,12 +23,14 @@
                 </div>
                 <div class="Menu__detailsContainer2">
                     <router-link to="/projects" class="Menu__links">
-                        <p class="Menu__detailsP">Projects / Projets</p>
+                        <p class="Menu__detailsP" v-if="isEnglish">Projects</p>
+                        <p class="Menu__detailsP" v-if="isFrench">Projets</p>
                     </router-link>
                 </div>
                 <div class="Menu__detailsContainer">
                     <router-link to="/skills" class="Menu__links">
-                        <p class="Menu__detailsP">Skills / Compétences</p>
+                        <p class="Menu__detailsP" v-if="isEnglish">Skills</p>
+                        <p class="Menu__detailsP" v-if="isFrench">Projets</p>
                     </router-link>
                 </div>
                 <div class="Menu__detailsContainer">
@@ -40,10 +44,17 @@
 </template>
 <script>
 import Icon from '@/components/Icon.vue'
+import FlagContent from '@/components/FlagContent.vue'
+
+import { mapState } from 'pinia'
+import { getLanguage } from '@/stores/getLanguage.js'
 
 export default {
     name: 'MenuPortfolio',
-    components: { Icon },
+    components: { Icon, FlagContent },
+    computed: {
+        ...mapState(getLanguage, ['isEnglish', 'isFrench']),
+    },
 }
 </script>
 <style>

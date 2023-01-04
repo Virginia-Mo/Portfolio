@@ -45,12 +45,12 @@
                             <a
                                 target="_blank"
                                 href="https://github.com/Virginia-Mo"
-                                >GitHub</a
+                                > &#x2794; GitHub</a
                             >
                             <a
                                 target="_blank"
                                 href="https://www.linkedin.com/in/virginia-mo/"
-                                >LinkedIn</a
+                                >&#x2794; LinkedIn</a
                             >
                         </p>
                     </div>
