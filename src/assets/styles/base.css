@@ -28,7 +28,9 @@ body {
 html,body {
   overflow: hidden;
 }
-
+.swiper-slide {
+  width: 4rem;
+}
 @media screen and (max-width:1250px){
   html,body {
     overflow: visible;

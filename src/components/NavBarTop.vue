@@ -26,15 +26,27 @@
         >
             <FlagContent />
             <router-link class="navLinks" to="/menu">Menu</router-link>
-            <router-link class="navLinks" to="/about" v-if="isEnglish">About</router-link>
-            <router-link class="navLinks" to="/about" v-if="isFrench">A Propos</router-link>
+            <router-link class="navLinks" to="/about" v-if="isEnglish"
+                >About</router-link
+            >
+            <router-link class="navLinks" to="/about" v-if="isFrench"
+                >A Propos</router-link
+            >
             <router-link class="navLinks" to="/experience"
                 >Experiences</router-link
             >
-            <router-link class="navLinks" to="/projects" v-if="isEnglish">Projects</router-link>
-            <router-link class="navLinks" to="/projects" v-if="isFrench">Projets</router-link>
-            <router-link class="navLinks" to="/skills" v-if="isEnglish">Skills</router-link>
-            <router-link class="navLinks" to="/skills" v-if="isFrench">Compétences</router-link>
+            <router-link class="navLinks" to="/projects" v-if="isEnglish"
+                >Projects</router-link
+            >
+            <router-link class="navLinks" to="/projects" v-if="isFrench"
+                >Projets</router-link
+            >
+            <router-link class="navLinks" to="/skills" v-if="isEnglish"
+                >Skills</router-link
+            >
+            <router-link class="navLinks" to="/skills" v-if="isFrench"
+                >Compétences</router-link
+            >
             <router-link class="navLinks" to="/contact">Contact</router-link>
         </nav>
     </div>
