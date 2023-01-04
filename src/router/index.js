@@ -59,6 +59,12 @@ const router = createRouter({
             name: 'contactPortfolio',
             component: () => import('../views/ContactView.vue'),
         },
+        {
+            path: '/error',
+            name: 'ErrorPortfolio',
+            component: () => import('../views/ErrorView.vue'),
+        },
+        { path: '/:pathMatch(.*)*', redirect: '/error' },
     ],
 })
 
