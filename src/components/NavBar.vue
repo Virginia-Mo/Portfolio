@@ -2,9 +2,9 @@
     <div id="nav__container--notMobile">
         <nav id="nav">
             <swiper
+                :slidesPerView="3"
                 :grabCursor="true"
                 :centeredSlides="true"
-                :slidesPerView="'auto'"
                 :loop="true"
                 :pagination="{
                     dynamicBullets: true,
@@ -13,7 +13,7 @@
                 class="mySwiper swiperNav"
             >
                 <swiper-slide class="swiper-slide swiperSlide-Nav">
-                    <div class="nav__iconDiv">
+                      <div class="nav__iconDiv">
                         <router-link to="/menu">
                             <icon name="home" color="#fff" size="30" />
                         </router-link>
@@ -97,11 +97,15 @@ export default {
     height: 100%;
     padding: 0.5rem 0.5rem 0;
 }
-
-.swiper-slide .swiperSlide-Nav {
+.test {
+    width: 4rem;
+    height: 100%;
+}
+.swiperSlide-Nav {
     background-position: center;
     background-size: cover;
     height: 3rem;
+    text-align: center;
     width: 3.8rem;
     /* padding: 0.5rem 0.5rem 0; */
     margin-top: 0.5rem;
@@ -135,6 +139,7 @@ export default {
     border-radius: 5px 5px 0 0;
     transition: 0.5s;
 }
+
 #nav__container--notMobile:hover {
     transition: 0.5s;
     bottom: 0;
@@ -143,7 +148,6 @@ export default {
     max-width: 100%;
     transition: 2s;
 }
-
 #nav {
     box-sizing: border-box;
     display: flex;
