@@ -12,7 +12,7 @@
             <div class="Menu__separator"></div>
             <section id="Menu__section">
                 <div
-                    class="Menu__detailsContainer animate__animated animate__zoomIn"
+                    class="Menu__detailsContainer animate__animated animate__fadeInLeft"
                 >
                     <router-link to="/about" class="Menu__links">
                         <p class="Menu__detailsP" v-if="isEnglish">About me</p>
@@ -20,14 +20,14 @@
                     </router-link>
                 </div>
                 <div
-                    class="Menu__detailsContainer2 animate__animated animate__zoomIn"
+                    class="Menu__detailsContainer2 animate__animated animate__fadeInRight animate__slow"
                 >
                     <router-link to="/experience" class="Menu__links">
                         <p class="Menu__detailsP">Education & Experience</p>
                     </router-link>
                 </div>
                 <div
-                    class="Menu__detailsContainer2 animate__animated animate__zoomIn"
+                    class="Menu__detailsContainer2 animate__animated animate__fadeInLeft animate__slow"
                 >
                     <router-link to="/projects" class="Menu__links">
                         <p class="Menu__detailsP" v-if="isEnglish">Projects</p>
@@ -35,7 +35,7 @@
                     </router-link>
                 </div>
                 <div
-                    class="Menu__detailsContainer animate__animated animate__zoomIn"
+                    class="Menu__detailsContainer animate__animated animate__fadeInRight"
                 >
                     <router-link to="/skills" class="Menu__links">
                         <p class="Menu__detailsP" v-if="isEnglish">Skills</p>
@@ -45,7 +45,7 @@
                     </router-link>
                 </div>
                 <div
-                    class="Menu__detailsContainer animate__animated animate__zoomIn"
+                    class="Menu__detailsContainer animate__animated animate__fadeInUp animate__slow"
                 >
                     <router-link to="/contact" class="Menu__links">
                         <p class="Menu__detailsP">Contact</p>
