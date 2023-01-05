@@ -7,27 +7,36 @@
                     <icon class="" name="home" :size="50" color="#dfd8ca" />
                 </router-link>
             </div>
-            <h1 id="Menu__h1">Table of Content</h1>
+            <h1 id="Menu__h1" v-if="isEnglish">Table of Contents</h1>
+            <h1 id="Menu__h1" v-if="isFrench">Sommaire</h1>
             <div class="Menu__separator"></div>
             <section id="Menu__section">
-                <div class="Menu__detailsContainer">
+                <div
+                    class="Menu__detailsContainer animate__animated animate__zoomIn"
+                >
                     <router-link to="/about" class="Menu__links">
                         <p class="Menu__detailsP" v-if="isEnglish">About me</p>
                         <p class="Menu__detailsP" v-if="isFrench">A Propos</p>
                     </router-link>
                 </div>
-                <div class="Menu__detailsContainer2">
+                <div
+                    class="Menu__detailsContainer2 animate__animated animate__zoomIn"
+                >
                     <router-link to="/experience" class="Menu__links">
                         <p class="Menu__detailsP">Education & Experience</p>
                     </router-link>
                 </div>
-                <div class="Menu__detailsContainer2">
+                <div
+                    class="Menu__detailsContainer2 animate__animated animate__zoomIn"
+                >
                     <router-link to="/projects" class="Menu__links">
                         <p class="Menu__detailsP" v-if="isEnglish">Projects</p>
                         <p class="Menu__detailsP" v-if="isFrench">Projets</p>
                     </router-link>
                 </div>
-                <div class="Menu__detailsContainer">
+                <div
+                    class="Menu__detailsContainer animate__animated animate__zoomIn"
+                >
                     <router-link to="/skills" class="Menu__links">
                         <p class="Menu__detailsP" v-if="isEnglish">Skills</p>
                         <p class="Menu__detailsP" v-if="isFrench">
@@ -35,7 +44,9 @@
                         </p>
                     </router-link>
                 </div>
-                <div class="Menu__detailsContainer">
+                <div
+                    class="Menu__detailsContainer animate__animated animate__zoomIn"
+                >
                     <router-link to="/contact" class="Menu__links">
                         <p class="Menu__detailsP">Contact</p>
                     </router-link>
@@ -47,7 +58,7 @@
 <script>
 import Icon from '@/components/Icon.vue'
 import FlagContent from '@/components/FlagContent.vue'
-
+import 'animate.css'
 import { mapState } from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
 
