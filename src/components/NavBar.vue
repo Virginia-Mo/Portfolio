@@ -89,17 +89,11 @@ export default {
 }
 </script>
 <style>
-.swiper-slide {
-    width: 4rem;
-}
+
 .swiperNav {
     width: 100%;
     height: 100%;
     padding: 0.5rem 0.5rem 0;
-}
-.test {
-    width: 4rem;
-    height: 100%;
 }
 .swiperSlide-Nav {
     background-position: center;

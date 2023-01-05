@@ -4,7 +4,7 @@
             :slidesPerView="1"
             :spaceBetween="30"
             :loop="true"
-            :direction="'vertical'"
+            :direction="vertical"
             :modules="modules"
             :mousewheel="true"
             :effect="'fade'"
