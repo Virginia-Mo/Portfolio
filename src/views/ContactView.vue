@@ -29,7 +29,7 @@
                             />
                         </div>
                         <p class="contact__p">
-                            : mo.antonio.virginia@gmail.com
+                            : antonio.vir@hotmail.com
                         </p>
                     </div>
                     <div class="contact__details">
