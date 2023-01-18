@@ -17,11 +17,11 @@
                     </ul>
                 </p>
             <br>
-                <h3 class="skills__h3">Frameworks</h3>
+                <h3 class="skills__h3">Librairies</h3>
                 <p class="skills__details">
                     <ul class="skills_ul">
                         <li>Vue JS : Vue Router, Pinia..</li>
-                        <li>React : React Router, Redux, JEST..</li>
+                        <li>React : React Router, Redux..</li>
                     </ul>
                 </p>
             </div>
