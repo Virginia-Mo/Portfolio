@@ -10,7 +10,7 @@
         <div class="Projects__mainDiv">
             <div class="Projects__firstdiv">
                 <div class="projects__imgDiv kiddycare__imgDiv">
-                    <a href="https://kiddycare.herokuapp.com/" target="_blank">
+                    <a href="https://kiddycare.netlify.app/" target="_blank">
                         <img
                             src="@/assets/imgs/kdc.png"
                             alt="Photo projet KiddyCare"
@@ -22,40 +22,51 @@
             <div class="Projects__secondDiv">
                 <div class="Projects__detailsContainer projects__kdcContainer">
                     <p class="Projects__p" v-if="isFrench">
-                        Kiddycare est un projet pour une école (qui n'existe
-                        pas). Ce site permet aux utilisateurs de s'informer sur
+                        KiddyCare est un projet crée en fullstack, fonctionnel et responsive.
+                        C'est une école fictive offrant divers cours. Ce site permet aux utilisateurs de s'informer sur
                         ce que l'école a à offrir, lire les dernières nouvelles
                         grâce à un blog et interagir avec les professeurs et
                         l'équipe administrative de l'école via des messages et
                         commentaires. <br />
 
-                        Pour accéder aux demandes des parents, l'équipe
-                        administrative et les professeurs ont une partie de
-                        back-office. Ils n'ont cependant pas les mêmes droits :
-                        l'équipe administrative a accès à toutes les
-                        fonctionnalités alors que les professeurs n'ont accès
-                        qu'aux fonctionnalités du blog (créer et supprimer un
-                        article et ses commentaires.)<br />
-                        J'ai codé ce projet en suivant une maquette graphique
-                        trouvée sur Internet (les copyrights sont dans le footer
-                        du site.).
-                        <strong
-                            >Je n'ai utilisé aucun code contenu dans le
-                            template.</strong
-                        >
+                        Un back-office a été mis en place pour gérer les données et les messages.<br />
                         Le site est responsive et s'adapte à tous types
                         d'appareil. <br />
-                        - > Pour le back-end, j'ai utilisé NodejS avec Express.
+                        <strong>Back-end</strong>:  NodeJS et Express.
                         L'architecture est un MVC, la base de donnée est faite
-                        avec PostgreSQL et Sequelize. Views rendues avec EJS.
+                        avec PostgreSQL et Sequelize.
                         <br />
-                        <strong
-                            >Une refonte de ce projet est en cours : Le
-                            front-end sera fait en React JS et les données du
-                            back-end transformé en API json.</strong
-                        ><br />
+                        <strong>Front-end</strong>: React , React Redux et React Router.<br />
+                        <strong>Sécurité</strong>: Mise en place de middlewares permettant de vérifier le rôle de l'utilisateur connecté (accès back-office), de nettoyer les formulaire pour éviter les attaque XSS, utilisation de Sequelize SQL avec des requêtes préparées.
+                        <br />
                         Repo Github =>
                         <span class="go">
+                            <a
+                                class="projects__links"
+                                target="_blank"
+                                href="https://github.com/Virginia-Mo/Front-end_KiddyCare_V2"
+                            >
+                                Front-end</a></span>&
+                        <span class="go">
+                            <a
+                                class="projects__links"
+                                target="_blank"
+                                href="https://github.com/Virginia-Mo/Back-end_KiddyCare_V2"
+                            >
+                                Back-end</a
+                            > </span
+                        ><br />
+                        Le site est en ligne ici =>
+                        <a
+                            class="projects__links"
+                            target="_blank"
+                            href="https://kiddycare.netlify.app/"
+                        >
+                        kiddycare.netlify.app</a
+                        >
+                        <br>
+                        J'ai initialement fait ce projet en full back-end, les pages étant générées via les Views d'EJS. 
+                        Le repo Github de ce projet : <span class="go">
                             <a
                                 class="projects__links"
                                 target="_blank"
@@ -64,16 +75,7 @@
                                 GO !</a
                             > </span
                         ><br />
-                        Le site est en ligne ici =>
-                        <a
-                            class="projects__links"
-                            target="_blank"
-                            href="http://kiddycare.herokuapp.com/"
-                        >
-                            kiddycare.herokuapp.com</a
-                        >
-                        (un petit temps d'attente est necessaire selon les dynos
-                        d'Heroku) Pour consulter la partie back-end, merci de me
+                       Pour consulter la partie back-end, merci de me
                         demander les identifiants. Vous pouvez voir un apercu
                         ici :
                         <button
@@ -85,8 +87,7 @@
 
                         <Teleport to="#app" v-if="openModalKDC">
                             <div
-                                class="Projects_imgContainer animate__animated animate__zoomIn"
-                            >
+                                class="Projects_imgContainer animate__animated animate__zoomIn">
                                 <button
                                     @click="handleModalKDC"
                                     class="button__closeModal"
@@ -97,7 +98,7 @@
                                     <template v-slot:slide1>
                                         <img
                                             class="Projects__back"
-                                            src="@/assets/imgs/kdc_article.png"
+                                            src="@/assets/imgs/bo1.png"
                                             alt="apercu du back-office"
                                         />
                                     </template>
@@ -105,7 +106,14 @@
                                     <template v-slot:slide2>
                                         <img
                                             class="Projects__back"
-                                            src="@/assets/imgs/kdc_blog.png"
+                                            src="@/assets/imgs/bo2.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                    <template v-slot:slide3>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/bo3.png"
                                             alt="apercu du back-office"
                                         />
                                     </template>
@@ -114,7 +122,7 @@
                         </Teleport>
                     </p>
                     <p class="Projects__p" v-if="isEnglish">
-                        Here's a project for a -non-existing- school : KiddyCare
+                        Here's a fullstack project for a -non-existing- school : KiddyCare
                         ! A website giving the possibilities to targeted users
                         (parents) to get details about the school through the
                         different pages, request a Newsletter, book a
@@ -122,30 +130,42 @@
                         school blog and leave a message.<br />
                         To access to all of those requests from users, the
                         school manager and teachers have a back-office part.
-                        They don't have the same rights though : the school
-                        manager (admin) can access to everything whereas the
-                        teachers can only create/remove articles and related
-                        comments. <br />
-                        I coded the front-end with HTML, CSS and Vanilla
-                        Javascript following the design of a template (link of
-                        copyrights are in the footer).
-                        <strong>
-                            I didn't use any code given in the template.The
-                            project is fully responsive.</strong
-                        ><br />
-                        For the back-end part, I used NodeJS with Express. The
+                        <strong>Back-end</strong>: NodeJS and Express. The
                         architecture used is a MVC. For the datas, I used a
                         relational database system : PostgreSQL. To access to
-                        those datas, I used Sequelize and made the views with
-                        EJS.
+                        those datas, I used Sequelize.
                         <br />
-                        <strong
-                            >I'm currently working on improving this project :
-                            The front-end will be done with ReactJS and datas
-                            will be rendered through a JSON type API.</strong
-                        >
+                        <strong>Front-end</strong>: React, React Redux, React Router.<br />
+                        <strong>Security</strong>: Some middlewares have been created to filter the connected user (access to the back-office), clean the form input to avoir XSS attacks and I also used Sequelize which makes prepared SQL requests.
                         Repo Github =>
                         <span class="go">
+                            <a
+                                class="projects__links"
+                                target="_blank"
+                                href="https://github.com/Virginia-Mo/Front-end_KiddyCare_V2"
+                            >
+                                Front-end</a></span>&
+                        <span class="go">
+                            <a
+                                class="projects__links"
+                                target="_blank"
+                                href="https://github.com/Virginia-Mo/Back-end_KiddyCare_V2"
+                            >
+                                Back-end</a
+                            > </span
+                        ><br />
+                        
+                        The project is deployed on Heroku at this adress :
+                        <a
+                            class="projects__links"
+                            target="_blank"
+                            href="https://kiddycare.netlify.app/"
+                        >
+                        kiddycare.netlify.app</a
+                        >
+                        <br>
+                        I initially created this projet using full back-end tech, pages being generated throw Views in EJS. 
+                        This project's repo is here : <span class="go">
                             <a
                                 class="projects__links"
                                 target="_blank"
@@ -154,16 +174,7 @@
                                 GO !</a
                             > </span
                         ><br />
-                        The project is deployed on Heroku at this adress :
-                        <a
-                            class="projects__links"
-                            target="_blank"
-                            href="http://kiddycare.herokuapp.com/"
-                        >
-                            kiddycare.herokuapp.com</a
-                        >
-                        (a short waiting time can be needed as the Heroku dynos
-                        wake up). To check the back-office part, you can ask me
+                      To check the back-office part, you can ask me
                         the login infos. Here's an overview :
                         <button
                             class="button__OpenModal"
@@ -174,8 +185,7 @@
 
                         <Teleport to="#app" v-if="openModalKDC">
                             <div
-                                class="Projects_imgContainer animate__animated animate__zoomIn"
-                            >
+                                class="Projects_imgContainer animate__animated animate__zoomIn">
                                 <button
                                     @click="handleModalKDC"
                                     class="button__closeModal"
@@ -183,19 +193,28 @@
                                     X
                                 </button>
                                 <SwiperOverview>
-                                    <template v-slot:slide1
-                                        ><img
+                                    <template v-slot:slide1>
+                                        <img
                                             class="Projects__back"
-                                            src="@/assets/imgs/kdc_article.png"
+                                            src="@/assets/imgs/bo1.png"
                                             alt="apercu du back-office"
-                                    /></template>
+                                        />
+                                    </template>
 
-                                    <template v-slot:slide2
-                                        ><img
+                                    <template v-slot:slide2>
+                                        <img
                                             class="Projects__back"
-                                            src="@/assets/imgs/kdc_blog.png"
+                                            src="@/assets/imgs/bo2.png"
                                             alt="apercu du back-office"
-                                    /></template>
+                                        />
+                                    </template>
+                                    <template v-slot:slide3>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/bo3.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
                                 </SwiperOverview>
                             </div>
                         </Teleport>
@@ -273,6 +292,9 @@ export default {
 </script>
 
 <style>
+.go {
+    margin-right: 0.5rem;
+}
 .swipeKDC {
     position: absolute;
     left: 10%;

@@ -121,15 +121,13 @@ export default {
 }
 
 #nav__container--notMobile {
+    display: none;
+    background-color: var(--lightBrown);
     width: 10%;
     position: absolute;
     bottom: -2rem;
-    height: 4rem;
-    background-color: var(--lightBrown);
-    /* margin: 0 auto; */
-    display: flex;
-    /* justify-items: flex-start; */
     left: 50%;
+    height: 4rem;
     border-radius: 5px 5px 0 0;
     transition: 0.5s;
 }
@@ -147,9 +145,9 @@ export default {
     display: flex;
     align-items: center;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (min-width: 1024px) {
     #nav__container--notMobile {
-        display: none;
+    display: flex;
     }
 }
 </style>

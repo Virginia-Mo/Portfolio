@@ -51,8 +51,7 @@
                         de développer de la rigueur, du sérieux et l'esprit
                         d'équipe. <br />
                         Je suis désormais développeuse web fullstack avec une
-                        spécialisation en ReactJS. Je recherche un CDI en tant
-                        que développeuse web à partir de janvier 2023.
+                        spécialisation en ReactJS.
                     </p>
                     <p id="About__details" v-if="isEnglish">
                         Hello! I'm Virginia Mo and I come from a little town by
@@ -69,8 +68,6 @@
                         work spirit.<br />
                         I'm now a fullstack web developer with a specialisation
                         in ReactJS. I currently prefer Front-end development.
-                        I'm looking for a full time job as a web developer from
-                        January 2023.
                     </p>
                 </div>
             </div>

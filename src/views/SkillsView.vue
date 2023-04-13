@@ -11,9 +11,9 @@
                 <p class="skills__details">
                     <ul class="skills_ul">
                         <li>HTML</li>
-                        <li>CSS</li>
-                        <li>SCSS</li>
+                        <li>CSS, SCSS</li>
                         <li>Javascript</li>
+                        <li>TypeScript : en cours</li>
                     </ul>
                 </p>
             <br>

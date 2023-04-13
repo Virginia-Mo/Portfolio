@@ -38,10 +38,6 @@
                 <span class="education__school">IFSI Ambroise Paré, Boulogne Billancourt</span><br>
                 Nursing school
             </p></div>
-<!-- 
-<div id="decoImage">
-    <img src="@/assets/imgs/round2.png" alt="image de décoration" id="decoImg">
-</div> -->
 </section>
         <section id="experience__Container">
             <div id="experience__imgDiv">
@@ -127,11 +123,12 @@ export default {
 <style scoped>
 
 #pageContainer {
+   display: block;
    background-image: url("@/assets/imgs/bg.png");
    background-repeat: no-repeat;
    background-size: cover;
-background-position: bottom;
-height: 100vh;
+   background-position: bottom;
+   height: 100vh;
 }
 #experience__aboutHome {
     position: fixed;

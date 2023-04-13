@@ -10,14 +10,12 @@
         <div class="Projects__mainDiv">
             <div id="mk__firstDiv">
                 <div class="projects__imgDiv mk__imgDiv">
-                    <a target="_blank" href="https://madjikarite-2esm.onrender.com/">
                         <img
                             src="@/assets/imgs/logomk.png"
                             alt="Photo projet Madjikarité"
                             id="madjikarité__img"
                             targer="_blank"
                         />
-                    </a>
                 </div>
             </div>
             <div  id="mk__secondDiv">
@@ -29,29 +27,89 @@
                        En effet, via le back-office, cette dernière peut accéder aux differentes commandes, aux produits en vente. Elle peut ajouter un produit et modifier ceux déjà existants.
                        La connexion des utilisateurs est sécurisée grâce à un token JWT.
                        L'équipe est composé de : 
+                       <div id="ulContainer">
                        <ul id="mk__ul">
                         <li><a target="_blank" href="https://github.com/madjikariteCaroline-K">&#x2794; Caroline K.</a></li>
                         <li> <a target="_blank" href="https://github.com/Jeremy-Nourri">&#x2794; Jérémy N.</a></li>
                         <li> <a target="_blank" href="https://github.com/NicolasZIELINSKI">&#x2794; Nicolas Z.</a></li>
+                    </ul>
+                        <ul id="mk__ul2">
                         <li><a target="_blank" href="https://github.com/PierreGoursolas">&#x2794; Pierre G.</a> </li>
                         <li><a target="_blank" href="https://github.com/Virginia-Mo">&#x2794; Virginia M.</a>  </li>
                        </ul>
-                        <!-- Repo Github =>
+                    </div>
+                        Repo Github =>
                         <span class="go">
                             <a
                                 class="projects__links"
-                                href="https://github.com/O-clock-Icare/projet-08-madjikarite"
+                                href="https://github.com/Virginia-Mo/Madjikarite"
                             >
                                 GO !</a
-                            > </span><br /> -->
-                        Le site est en ligne ici =>
-                        <a
-                            class="projects__links"
-                            target="_blank"
-                            href="https://madjikarite-2esm.onrender.com/"
+                            > </span><br />
+                            Voici un petit apercu du site :
+                            <button
+                            class="button__OpenModal"
+                            @click="handleModalKDC"
                         >
-                            Madjikarité</a>
-                        
+                            CLICK
+                        </button>
+
+                        <Teleport to="#app" v-if="openModalKDC">
+                            <div
+                                class="Projects_imgContainer animate__animated animate__zoomIn">
+                                <button
+                                    @click="handleModalKDC"
+                                    class="button__closeModal"
+                                >
+                                    X
+                                </button>
+                                <SwiperOverview>
+                                    <template v-slot:slide1>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+
+                                    <template v-slot:slide2>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji2.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                    <template v-slot:slide3>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji3.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                    <template v-slot:slide4>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji6.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                    <template v-slot:slide5>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji5.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                    <template v-slot:slide6>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji4.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                </SwiperOverview>
+                            </div>
+                        </Teleport>
                     </p>
                     <p class="Projects__p" v-if="isEnglish">
                         Madjikarité is a team-building project for a real client, Yankimadji RASSEMBAYE. It’s a hand-made natural cosmetics sales website. The aim of this project is to fight against female genital mutilation in Chad by providing work to female genital mutilators through shea culture . 
@@ -60,29 +118,89 @@
                        Indeed, via the back office, she can access the various orders, the products on sale. She can add a product and update existing ones.
                        User login is secured with a JWT token.
                        The team is composed by : 
+                       <div id="ulContainer">
                        <ul id="mk__ul">
                         <li><a target="_blank" href="https://github.com/madjikariteCaroline-K">&#x2794; Caroline K.</a></li>
                         <li> <a target="_blank" href="https://github.com/Jeremy-Nourri">&#x2794; Jérémy N.</a></li>
                         <li> <a target="_blank" href="https://github.com/NicolasZIELINSKI">&#x2794; Nicolas Z.</a></li>
+                    </ul>
+                        <ul id="mk__ul2">
                         <li><a target="_blank" href="https://github.com/PierreGoursolas">&#x2794; Pierre G.</a> </li>
                         <li><a target="_blank" href="https://github.com/Virginia-Mo">&#x2794; Virginia M.</a>  </li>
                        </ul>
-                        <!-- Repo Github =>
+                    </div>
+                        Repo Github =>
                         <span class="go">
                             <a
                                 class="projects__links"
-                                href="https://github.com/O-clock-Icare/projet-08-madjikarite"
+                                href="https://github.com/Virginia-Mo/Madjikarite"
                             >
                                 GO !</a
-                            > </span><br /> -->
-                        This website is online here =>
-                        <a
-                            class="projects__links"
-                            target="_blank"
-                            href="https://madjikarite-2esm.onrender.com/"
+                            > </span><br />
+                            Here's an overview  :
+                            <button
+                            class="button__OpenModal"
+                            @click="handleModalKDC"
                         >
-                            Madjikarité</a>
-                        
+                            CLICK
+                        </button>
+
+                        <Teleport to="#app" v-if="openModalKDC">
+                            <div
+                                class="Projects_imgContainer animate__animated animate__zoomIn">
+                                <button
+                                    @click="handleModalKDC"
+                                    class="button__closeModal"
+                                >
+                                    X
+                                </button>
+                                <SwiperOverview>
+                                    <template v-slot:slide1>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+
+                                    <template v-slot:slide2>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji2.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                    <template v-slot:slide3>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji3.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                    <template v-slot:slide4>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji6.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                    <template v-slot:slide5>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji5.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                    <template v-slot:slide6>
+                                        <img
+                                            class="Projects__back"
+                                            src="@/assets/imgs/Madji4.png"
+                                            alt="apercu du back-office"
+                                        />
+                                    </template>
+                                </SwiperOverview>
+                            </div>
+                        </Teleport>
                     </p>
                 </div>
             </div>
@@ -105,19 +223,26 @@
 <script>
 import NavBarTop from '@/components/NavBarTop.vue'
 import NavBar from '@/components/NavBar.vue'
-import { mapState} from 'pinia'
+import SwiperOverview from './SwiperOverview.vue'
+
+import { mapState, mapActions} from 'pinia'
 import { getLanguage } from '@/stores/getLanguage.js'
 
 import 'animate.css'
 
 export default {
     name: 'Madjikarite_Project',
-    components: {  NavBarTop, NavBar},
+    components: {  NavBarTop, NavBar, SwiperOverview },
     mounted() {
        window.scrollTo(0, 0)},
     computed: {
-        ...mapState(getLanguage, ['isEnglish', 'isFrench']),
+        ...mapState(getLanguage, ['isEnglish', 'isFrench', 'openModalKDC']),
     },
+    methods: {
+        ...mapActions(getLanguage, {
+            handleModalKDC: 'handleModalKDC',
+        })
+},
 }
 </script>
 <style>
@@ -125,7 +250,12 @@ export default {
     background-color: black;
     background-size: auto;
 }
-#mk__ul {
+#ulContainer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+#mk__ul2 {
     text-align: center;
 }
 
@@ -142,6 +272,9 @@ export default {
     max-width: 100%;
 }
 @media screen and (min-width: 1024px) {
+    #ulContainer {
+        gap: 10rem;
+    }
     #mkContainer {
         background-image: url('@/assets/imgs/bgmadji.png');
         background-size: 100% 100%;

@@ -12,6 +12,18 @@
         <swiper-slide class="slideOverview">
             <slot name="slide2"></slot>
         </swiper-slide>
+        <swiper-slide class="slideOverview">
+            <slot name="slide3"></slot>
+        </swiper-slide>
+        <swiper-slide class="slideOverview">
+            <slot name="slide4"></slot>
+        </swiper-slide>
+        <swiper-slide class="slideOverview">
+            <slot name="slide5"></slot>
+        </swiper-slide>
+        <swiper-slide class="slideOverview">
+            <slot name="slide6"></slot>
+        </swiper-slide>
     </swiper>
 </template>
 <script>

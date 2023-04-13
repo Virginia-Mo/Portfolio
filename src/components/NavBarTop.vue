@@ -79,10 +79,10 @@ export default {
 </script>
 <style>
 #navBarTop--notMobile {
-    position: fixed;
-    right: 0.5rem;
-    top: 0.5rem;
-    display: flex;
+    display: none;
+}
+#navBarTop--mobile {
+    display: block;
 }
 #navBarTop--mobile:hover {
     transition: 0.5s;
@@ -137,14 +137,20 @@ export default {
     align-items: center;
     width: 100%;
 }
-@media screen and (max-width: 1250px) {
+/* @media screen and (max-width: 1250px) {
     #navBarTop--notMobile {
         display: none;
     }
-}
-@media screen and (min-width: 1250px) {
+} */
+@media screen and (min-width: 1024px) {
     #navBarTop--mobile {
         display: none;
+    }
+    #navBarTop--notMobile {
+        position: fixed;
+        right: 0.5rem;
+        top: 0.5rem;
+        display: flex;
     }
 }
 /* BUTTON STYLES */
