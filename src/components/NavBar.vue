@@ -145,7 +145,7 @@ export default {
     display: flex;
     align-items: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
     #nav__container--notMobile {
     display: flex;
     }

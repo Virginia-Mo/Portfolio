@@ -39,7 +39,7 @@ p
                             ><a
                                 class="projects__links"
                                 target="_blank"
-                                href="https://github.com/Virginia-Mo/virginia-mo.github.io"
+                                href="https://github.com/Virginia-Mo/Pokedex"
                             >
                                 GO !</a
                             > </span

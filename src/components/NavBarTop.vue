@@ -142,7 +142,7 @@ export default {
         display: none;
     }
 } */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
     #navBarTop--mobile {
         display: none;
     }

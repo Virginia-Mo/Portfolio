@@ -37,7 +37,7 @@
                         avec PostgreSQL et Sequelize.
                         <br />
                         <strong>Front-end</strong>: React , React Redux et React Router.<br />
-                        <strong>Sécurité</strong>: Mise en place de middlewares permettant de vérifier le rôle de l'utilisateur connecté (accès back-office), de nettoyer les formulaires pour éviter les attaque XSS, utilisation de Sequelize SQL avec des requêtes préparées.
+                        <strong>Sécurité</strong>: Mise en place de middlewares permettant de vérifier le rôle de l'utilisateur connecté (accès back-office), de nettoyer les formulaires pour éviter les attaques XSS, utilisation de Sequelize SQL avec des requêtes préparées.
                         <br />
                         Repo Github =>
                         <span class="go">
