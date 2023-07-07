@@ -75,7 +75,7 @@
                                 GO !</a
                             > </span
                         ><br />
-                       Pour consulter la partie back-end, merci de me
+                       <!-- Pour consulter la partie back-end, merci de me
                         demander les identifiants. Vous pouvez voir un apercu
                         ici :
                         <button
@@ -119,7 +119,7 @@
                                     </template>
                                 </SwiperOverview>
                             </div>
-                        </Teleport>
+                        </Teleport> -->
                     </p>
                     <p class="Projects__p" v-if="isEnglish">
                         Here's a fullstack project for a -non-existing- school : KiddyCare
@@ -174,7 +174,7 @@
                                 GO !</a
                             > </span
                         ><br />
-                      To check the back-office part, you can ask me
+                      <!-- To check the back-office part, you can ask me
                         the login infos. Here's an overview :
                         <button
                             class="button__OpenModal"
@@ -217,7 +217,7 @@
                                     </template>
                                 </SwiperOverview>
                             </div>
-                        </Teleport>
+                        </Teleport> -->
                     </p>
                 </div>
             </div>
